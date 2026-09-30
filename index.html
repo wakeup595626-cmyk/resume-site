@@ -1,0 +1,511 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>张国树  电气工程  个人简历</title>
+  <meta name="description" content="张国树，邵阳学院电气工程及其自动化专业，挑战杯国家级一等奖获得者，FTU智能感知自愈系统核心成员">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'></text></svg>">
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --surface: #12121a;
+      --surface2: #1a1a26;
+      --border: #2a2a3a;
+      --text: #e8e8f0;
+      --text2: #a0a0b8;
+      --accent: #f0a030;
+      --accent2: #4fc3f7;
+      --accent3: #81c784;
+      --glow: rgba(240, 160, 48, 0.15);
+      --radius: 16px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    a { color: var(--accent2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ---- NAV ---- */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(10,10,15,0.85); backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem; height: 56px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo { font-weight: 700; font-size: 1.1rem; color: var(--accent); letter-spacing: 1px; }
+    .nav-links { display: flex; gap: 1.8rem; list-style: none; }
+    .nav-links a { color: var(--text2); font-size: 0.88rem; transition: color .2s; }
+    .nav-links a:hover { color: var(--accent); text-decoration: none; }
+
+    /* ---- HERO ---- */
+    .hero {
+      min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+      padding: 80px 2rem 4rem;
+    }
+    .hero-bg {
+      position: absolute; inset: 0; pointer-events: none;
+    }
+    .hero-bg::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 70% 40%, rgba(240,160,48,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 60% at 20% 60%, rgba(79,195,247,0.06) 0%, transparent 60%);
+    }
+    .grid-lines {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .hero-content {
+      position: relative; max-width: 900px; width: 100%;
+      animation: fadeUp .8s ease both;
+    }
+    @keyframes fadeUp { from { opacity:0; transform: translateY(30px); } to { opacity:1; transform: translateY(0); } }
+
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(240,160,48,0.12); border: 1px solid rgba(240,160,48,0.25);
+      color: var(--accent); padding: 6px 16px; border-radius: 50px;
+      font-size: 0.85rem; font-weight: 600; margin-bottom: 1.5rem;
+    }
+    .hero-badge::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--accent3); animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.3; } }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 800; letter-spacing: -1px; line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .hero h1 .accent { color: var(--accent); }
+    .hero h1 .accent2 { color: var(--accent2); }
+
+    .hero-sub {
+      font-size: 1.15rem; color: var(--text2); max-width: 600px; margin-bottom: 2.5rem;
+    }
+
+    .hero-tags {
+      display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 3rem;
+    }
+    .tag {
+      background: var(--surface2); border: 1px solid var(--border);
+      padding: 6px 14px; border-radius: 8px; font-size: 0.82rem; color: var(--text2);
+    }
+    .tag:hover { border-color: var(--accent); color: var(--accent); }
+
+    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn {
+      padding: 12px 28px; border-radius: 10px; font-weight: 600; font-size: 0.95rem;
+      transition: all .2s; cursor: pointer; border: none;
+    }
+    .btn-primary {
+      background: var(--accent); color: #000;
+    }
+    .btn-primary:hover { background: #ffb940; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(240,160,48,0.3); }
+    .btn-outline {
+      background: transparent; color: var(--text); border: 1px solid var(--border);
+    }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+
+    /* ---- SECTION ---- */
+    section {
+      max-width: 900px; margin: 0 auto; padding: 5rem 2rem;
+    }
+    .section-label {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 0.5rem;
+    }
+    .section-label .num {
+      font-family: 'JetBrains Mono', 'Fira Code', monospace;
+      color: var(--accent); font-size: 0.85rem; font-weight: 700;
+    }
+    .section-label .line { flex: 1; height: 1px; background: var(--border); }
+    .section-title {
+      font-size: 2rem; font-weight: 700; margin-bottom: 2.5rem; letter-spacing: -0.5px;
+    }
+
+    /* ---- ABOUT ---- */
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
+    }
+    @media (max-width: 640px) { .about-grid { grid-template-columns: 1fr; } }
+    .about-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 1.8rem; transition: border-color .2s;
+    }
+    .about-card:hover { border-color: var(--accent); }
+    .about-card h3 { color: var(--accent); font-size: 0.9rem; margin-bottom: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+    .about-card p { color: var(--text2); font-size: 0.92rem; }
+    .about-card .value { color: var(--text); font-weight: 600; }
+
+    /* ---- EXPERIENCE ---- */
+    .exp-item {
+      position: relative; padding-left: 2.5rem; padding-bottom: 2.5rem;
+      border-left: 2px solid var(--border);
+    }
+    .exp-item:last-child { padding-bottom: 0; }
+    .exp-item::before {
+      content: ''; position: absolute; left: -7px; top: 6px;
+      width: 12px; height: 12px; border-radius: 50%;
+      background: var(--accent); border: 2px solid var(--bg);
+    }
+    .exp-item.current::before { background: var(--accent3); }
+    .exp-date {
+      font-family: 'JetBrains Mono', 'Fira Code', monospace;
+      font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-bottom: 4px;
+    }
+    .exp-item h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 4px; }
+    .exp-item .role { color: var(--accent2); font-size: 0.9rem; margin-bottom: 8px; }
+    .exp-item p { color: var(--text2); font-size: 0.92rem; }
+
+    /* ---- SKILLS ---- */
+    .skills-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.2rem;
+    }
+    .skill-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 1.5rem; text-align: center; transition: all .2s;
+    }
+    .skill-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+    .skill-card .icon { font-size: 2rem; margin-bottom: 0.8rem; }
+    .skill-card h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 4px; }
+    .skill-card p { font-size: 0.8rem; color: var(--text2); }
+
+    /* ---- AWARDS ---- */
+    .awards-table {
+      width: 100%; border-collapse: collapse;
+    }
+    .awards-table th, .awards-table td {
+      padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border);
+    }
+    .awards-table th {
+      font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;
+      color: var(--text2); font-weight: 600;
+    }
+    .awards-table td { font-size: 0.92rem; }
+    .awards-table tr:hover td { background: rgba(240,160,48,0.04); }
+    .badge {
+      display: inline-block; padding: 3px 10px; border-radius: 6px; font-size: 0.78rem; font-weight: 600;
+    }
+    .badge-gold { background: rgba(240,160,48,0.15); color: var(--accent); }
+    .badge-silver { background: rgba(192,192,192,0.15); color: #c0c0c0; }
+    .badge-blue { background: rgba(79,195,247,0.15); color: var(--accent2); }
+    .badge-green { background: rgba(129,199,132,0.15); color: var(--accent3); }
+
+    /* ---- CONTACT ---- */
+    .contact-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem;
+    }
+    .contact-item {
+      display: flex; align-items: center; gap: 12px;
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 1.2rem 1.5rem; transition: all .2s;
+    }
+    .contact-item:hover { border-color: var(--accent); text-decoration: none; }
+    .contact-item .icon { font-size: 1.3rem; }
+    .contact-item .label { font-size: 0.8rem; color: var(--text2); }
+    .contact-item .value { font-size: 0.95rem; font-weight: 600; color: var(--text); }
+
+    /* ---- FOOTER ---- */
+    footer {
+      text-align: center; padding: 3rem 2rem;
+      border-top: 1px solid var(--border);
+      color: var(--text2); font-size: 0.85rem;
+    }
+    footer .heart { color: var(--accent); }
+
+    /* ---- SCROLL ANIMATION ---- */
+    .reveal {
+      opacity: 0; transform: translateY(30px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .reveal.visible {
+      opacity: 1; transform: translateY(0);
+    }
+
+    /* ---- RESPONSIVE ---- */
+    @media (max-width: 640px) {
+      nav { padding: 0 1rem; }
+      .nav-links { gap: 1rem; }
+      .nav-links a { font-size: 0.78rem; }
+      section { padding: 3rem 1rem; }
+      .hero { padding: 80px 1rem 3rem; }
+      .exp-item { padding-left: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"> 张国树</div>
+  <ul class="nav-links">
+    <li><a href="#about">关于</a></li>
+    <li><a href="#experience">经历</a></li>
+    <li><a href="#skills">技能</a></li>
+    <li><a href="#awards">荣誉</a></li>
+    <li><a href="#contact">联系</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-bg"><div class="grid-lines"></div></div>
+  <div class="hero-content">
+    <div class="hero-badge">求职  实习  合作</div>
+    <h1>
+      你好，我是 <span class="accent">张国树</span><br>
+      <span class="accent2">电气工程</span> 在读本科生
+    </h1>
+    <p class="hero-sub">
+      邵阳学院电气工程及其自动化专业 2024 级，挑战杯国家级一等奖获得者，
+      专注于配电网智能化与嵌入式系统开发。
+    </p>
+    <div class="hero-tags">
+      <span class="tag"> 电气工程及其自动化</span>
+      <span class="tag"> 挑战杯国家级一等奖</span>
+      <span class="tag"> FTU 智能感知自愈系统</span>
+      <span class="tag"> 4 项实用新型专利</span>
+      <span class="tag"> STM32 嵌入式开发</span>
+    </div>
+    <div class="hero-cta">
+      <a href="#contact" class="btn btn-primary">联系我 </a>
+      <a href="#experience" class="btn btn-outline">查看经历</a>
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about" class="reveal">
+  <div class="section-label">
+    <span class="num">01</span>
+    <div class="line"></div>
+  </div>
+  <h2 class="section-title">关于我</h2>
+  <div class="about-grid">
+    <div class="about-card">
+      <h3> 教育背景</h3>
+      <p><span class="value">邵阳学院</span>  电气工程学院<br>
+      电气工程及其自动化专业<br>
+      2024 级本科（24级电力3班）<br>
+      学号：2441201139</p>
+    </div>
+    <div class="about-card">
+      <h3> 身份角色</h3>
+      <p><span class="value">班长</span>  24级电力3班<br>
+      <span class="value">实验室负责人</span>  创翼实验室<br>
+      <span class="value">骨干成员</span>  亿熠创新创业孵化基地<br>
+      <span class="value">会员</span>  中国电源协会</p>
+    </div>
+    <div class="about-card">
+      <h3> 政治面貌</h3>
+      <p>共青团员  入党积极分子<br>
+      青马工程培训结业（湖南省青年马克思主义者培养学院）</p>
+    </div>
+    <div class="about-card">
+      <h3> 基本信息</h3>
+      <p>2004 年 9 月 14 日出生<br>
+      湖南  邵阳<br>
+      普通话二级乙等</p>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="reveal">
+  <div class="section-label">
+    <span class="num">02</span>
+    <div class="line"></div>
+  </div>
+  <h2 class="section-title">项目与经历</h2>
+
+  <div class="exp-item current">
+    <div class="exp-date">2025  至今</div>
+    <h3>输电线路故障图像高速捕获方法研究</h3>
+    <div class="role">项目负责人  省级大学生创新训练计划</div>
+    <p>负责故障瞬间可视化、多源数据采集与防误触发机制研究，项目历经 14 版方案迭代，已获省级立项。</p>
+  </div>
+
+  <div class="exp-item current">
+    <div class="exp-date">2025  至今</div>
+    <h3>创翼实验室</h3>
+    <div class="role">实验室负责人</div>
+    <p>负责实验室日常管理、成员纳新与培训，组织 2025 年"创翼杯"电子设计竞赛，管理 304/332 实验室座位分配与设备维护。</p>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-date">2025</div>
+    <h3> FTU 智能感知自愈系统</h3>
+    <div class="role">核心成员  挑战杯 / 创新大赛 / 创客中国</div>
+    <p>
+      研发 10kV 配电网终端设备故障智慧感知自愈系统，核心技术包括双模自适应电池均衡（切换响应 <10ms）、
+      单相接地故障选线定位（精度 >99%）、基于有向图的 FTU 优化配置。
+      成果获挑战杯国家级一等奖、湖南省银奖，并通过洞口县供电公司验收。
+    </p>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-date">2025</div>
+    <h3> 排烟枪设备</h3>
+    <div class="role">发明人之一  实用新型专利</div>
+    <p>参与设计消防用排烟枪设备，获实用新型专利（申请号：2025218546396），与城步消防、大祥区消防开展宣传合作。</p>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-date">2025</div>
+    <h3> 闲鱼单片机课设</h3>
+    <div class="role">运营者  课程设计 / 副业</div>
+    <p>在闲鱼平台运营 14 款单片机课程设计商品（STM32 / AT89C51 / STC89C52），已开通自动发货，实现技术变现。</p>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-date">2024  至今</div>
+    <h3> 班级管理</h3>
+    <div class="role">班长  24级电力3班</div>
+    <p>负责班级日常管理、成绩统计、活动组织与信息传达，协调师生沟通，维护班级良好学习氛围。</p>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="reveal">
+  <div class="section-label">
+    <span class="num">03</span>
+    <div class="line"></div>
+  </div>
+  <h2 class="section-title">技能与工具</h2>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="icon"></div>
+      <h4>电力系统分析</h4>
+      <p>配电网自动化  故障诊断  继电保护</p>
+    </div>
+    <div class="skill-card">
+      <div class="icon"></div>
+      <h4>嵌入式开发</h4>
+      <p>STM32  C51  传感器融合  固件开发</p>
+    </div>
+    <div class="skill-card">
+      <div class="icon"></div>
+      <h4>编程语言</h4>
+      <p>C / C++  Python  MATLAB  JavaScript</p>
+    </div>
+    <div class="skill-card">
+      <div class="icon"></div>
+      <h4>仿真与设计</h4>
+      <p>MATLAB/Simulink  AutoCAD  电路设计</p>
+    </div>
+    <div class="skill-card">
+      <div class="icon"></div>
+      <h4>Unreal Engine</h4>
+      <p>UE5 动画  Mixamo 角色绑定</p>
+    </div>
+    <div class="skill-card">
+      <div class="icon"></div>
+      <h4>团队协作</h4>
+      <p>项目管理  技术文档  竞赛策划</p>
+    </div>
+  </div>
+</section>
+
+<!-- AWARDS -->
+<section id="awards" class="reveal">
+  <div class="section-label">
+    <span class="num">04</span>
+    <div class="line"></div>
+  </div>
+  <h2 class="section-title">荣誉与竞赛</h2>
+  <table class="awards-table">
+    <thead>
+      <tr><th>时间</th><th>名称</th><th>奖项/级别</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>2025</td><td>挑战杯大学生课外学术科技作品竞赛</td><td><span class="badge badge-gold"> 国家级一等奖</span></td></tr>
+      <tr><td>2025.07</td><td>中国国际大学生创新大赛</td><td><span class="badge badge-silver"> 湖南省银奖</span></td></tr>
+      <tr><td>2025.08</td><td>创客中国</td><td><span class="badge badge-blue">省级参赛</span></td></tr>
+      <tr><td>2025.06</td><td>湖南省大学生创新训练计划</td><td><span class="badge badge-green">省级立项</span></td></tr>
+      <tr><td>2025</td><td>中国大学生自强之星</td><td><span class="badge badge-gold">推荐候选人</span></td></tr>
+      <tr><td>2025.06</td><td>青马工程培训</td><td><span class="badge badge-blue">结业证书</span></td></tr>
+      <tr><td>2025.10</td><td>央视出镜/报道</td><td><span class="badge badge-gold"> 央视报道</span></td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.1rem; color: var(--text2);"> 知识产权</h3>
+  <table class="awards-table">
+    <thead>
+      <tr><th>名称</th><th>类型</th><th>申请号/登记号</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>一种排烟枪设备</td><td><span class="badge badge-blue">实用新型</span></td><td>2025218546396</td></tr>
+      <tr><td>一种光纤传感探头封装结构</td><td><span class="badge badge-blue">实用新型</span></td><td>2025210751513</td></tr>
+      <tr><td>一种光纤传感探头</td><td><span class="badge badge-blue">实用新型</span></td><td>2025210983830</td></tr>
+      <tr><td>一种光纤连接器结构</td><td><span class="badge badge-blue">实用新型</span></td><td>2025215586917</td></tr>
+      <tr><td>FTU备用电源温湿度检测系统 V5.0</td><td><span class="badge badge-green">软件著作权</span></td><td>2025SR1454812</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="reveal">
+  <div class="section-label">
+    <span class="num">05</span>
+    <div class="line"></div>
+  </div>
+  <h2 class="section-title">联系我</h2>
+  <p style="color: var(--text2); margin-bottom: 2rem;">
+    如果你对配电网智能化、嵌入式开发或竞赛合作感兴趣，欢迎与我联系！
+  </p>
+  <div class="contact-grid">
+    <a href="tel:19386902768" class="contact-item">
+      <span class="icon"></span>
+      <div><div class="label">手机</div><div class="value">19386902768</div></div>
+    </a>
+    <a href="https://wpa.qq.com/msgrd?v=3&uin=2565368932&site=qq&menu=yes" class="contact-item" target="_blank">
+      <span class="icon"></span>
+      <div><div class="label">QQ</div><div class="value">2565368932</div></div>
+    </a>
+    <div class="contact-item">
+      <span class="icon"></span>
+      <div><div class="label">学校</div><div class="value">邵阳学院  电气工程学院</div></div>
+    </div>
+    <div class="contact-item">
+      <span class="icon"></span>
+      <div><div class="label">坐标</div><div class="value">湖南  邵阳</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p> 2026 张国树  用 <span class="heart"></span> 和 <span class="heart"></span> 构建  托管于 Cloudflare Pages</p>
+</footer>
+
+<script>
+// Scroll reveal animation
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Smooth nav active state
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    if (scrollY >= s.offsetTop - 200) current = s.id;
+  });
+  navLinks.forEach(a => {
+    a.style.color = a.getAttribute('href') === '#' + current ? 'var(--accent)' : '';
+  });
+});
+</script>
+
+</body>
+</html>
