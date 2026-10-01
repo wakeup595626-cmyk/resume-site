@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>张国树 | 个人简历与工程成果展 (Guoshu Zhang - Resume & Portfolio)</title>
-  <meta name="description" content="张国树的个人简历与工程成果展 - 邵阳学院电气工程及其自动化，挑战杯国家一等奖获得者，专注智能配电网自动化、嵌入式系统与科技创新">
+  <meta name="description" content="张国树的个人简历与工程成果展 - 邵阳学院电气工程及其自动化，挑战杯全国一等奖、中国国际大学生创新大赛省二等奖、2项省级大创立项、4项国家实用新型专利">
   
   <!-- Google Fonts: Inter, JetBrains Mono, Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,21 +45,6 @@
               700: '#1e293b',
               600: '#334155'
             }
-          },
-          animation: {
-            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-            'float': 'float 6s ease-in-out infinite',
-            'glow': 'glow 3s ease-in-out infinite alternate',
-          },
-          keyframes: {
-            float: {
-              '0%, 100%': { transform: 'translateY(0px)' },
-              '50%': { transform: 'translateY(-8px)' },
-            },
-            glow: {
-              '0%': { boxShadow: '0 0 15px rgba(14, 165, 233, 0.3)' },
-              '100%': { boxShadow: '0 0 30px rgba(14, 165, 233, 0.7)' },
-            }
           }
         }
       }
@@ -83,7 +68,7 @@
   <div class="fixed bottom-[-100px] left-[-100px] w-[500px] h-[500px] bg-emerald-600/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
 
   <!-- Sticky Navigation Header -->
-  <header class="sticky top-0 z-40 backdrop-blur-xl bg-[#080c14]/80 border-b border-slate-800/80 transition-all duration-300">
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-[#080c14]/85 border-b border-slate-800/80 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       
       <!-- Brand Logo / Name -->
@@ -101,12 +86,12 @@
 
       <!-- Desktop Nav Links -->
       <nav class="hidden md:flex items-center gap-1 bg-slate-900/60 p-1.5 rounded-full border border-slate-800/80 backdrop-blur-md">
-        <a href="#about" class="px-3.5 py-1.5 text-xs font-medium text-slate-300 hover:text-cyan-400 hover:bg-slate-800/60 rounded-full transition-all">关于我</a>
-        <a href="#awards" class="px-3.5 py-1.5 text-xs font-medium text-slate-300 hover:text-cyan-400 hover:bg-slate-800/60 rounded-full transition-all">核心荣誉</a>
-        <a href="#projects" class="px-3.5 py-1.5 text-xs font-medium text-slate-300 hover:text-cyan-400 hover:bg-slate-800/60 rounded-full transition-all">科研与工程</a>
-        <a href="#patents" class="px-3.5 py-1.5 text-xs font-medium text-slate-300 hover:text-cyan-400 hover:bg-slate-800/60 rounded-full transition-all">发明专利</a>
-        <a href="#skills" class="px-3.5 py-1.5 text-xs font-medium text-slate-300 hover:text-cyan-400 hover:bg-slate-800/60 rounded-full transition-all">工程技术栈</a>
-        <a href="#timeline" class="px-3.5 py-1.5 text-xs font-medium text-slate-300 hover:text-cyan-400 hover:bg-slate-800/60 rounded-full transition-all">历程脉络</a>
+        <a href="#about" class="px-3 py-1.5 text-xs font-medium text-slate-300 hover:text-cyan-400 hover:bg-slate-800/60 rounded-full transition-all">关于我</a>
+        <a href="#honors-matrix" class="px-3 py-1.5 text-xs font-medium text-slate-300 hover:text-cyan-400 hover:bg-slate-800/60 rounded-full transition-all">获奖荣誉库</a>
+        <a href="#projects" class="px-3 py-1.5 text-xs font-medium text-slate-300 hover:text-cyan-400 hover:bg-slate-800/60 rounded-full transition-all">科研与工程</a>
+        <a href="#patents" class="px-3 py-1.5 text-xs font-medium text-slate-300 hover:text-cyan-400 hover:bg-slate-800/60 rounded-full transition-all">发明专利</a>
+        <a href="#skills" class="px-3 py-1.5 text-xs font-medium text-slate-300 hover:text-cyan-400 hover:bg-slate-800/60 rounded-full transition-all">技术栈</a>
+        <a href="#timeline" class="px-3 py-1.5 text-xs font-medium text-slate-300 hover:text-cyan-400 hover:bg-slate-800/60 rounded-full transition-all">历程脉络</a>
       </nav>
 
       <!-- Action Buttons -->
@@ -114,13 +99,13 @@
         <!-- Print / PDF Resume Button -->
         <button onclick="openPrintModal()" class="flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 hover:bg-cyan-500/20 hover:border-cyan-400 transition-all duration-300 shadow-sm shadow-cyan-500/10">
           <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
-          <span>标准简历视图</span>
+          <span>标准求职简历</span>
         </button>
 
-        <!-- Contact CTA -->
-        <a href="#contact" class="hidden sm:flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-md shadow-cyan-500/20">
-          <i data-lucide="send" class="w-3.5 h-3.5"></i>
-          <span>联系我</span>
+        <!-- GitHub Repo Link -->
+        <a href="https://github.com/wakeup595626-cmyk/resume-site" target="_blank" class="hidden sm:flex items-center gap-1.5 px-3 py-2 text-xs font-medium rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition-all border border-slate-700">
+          <i data-lucide="github" class="w-3.5 h-3.5"></i>
+          <span>GitHub</span>
         </a>
 
         <!-- Mobile Menu Toggle -->
@@ -134,7 +119,7 @@
     <!-- Mobile Dropdown Menu -->
     <div id="mobile-menu" class="hidden md:hidden border-b border-slate-800 bg-[#0d131f]/95 backdrop-blur-xl px-4 py-4 space-y-2">
       <a href="#about" class="block py-2 text-sm text-slate-300 hover:text-cyan-400">关于我</a>
-      <a href="#awards" class="block py-2 text-sm text-slate-300 hover:text-cyan-400">核心荣誉</a>
+      <a href="#honors-matrix" class="block py-2 text-sm text-slate-300 hover:text-cyan-400">17项获奖荣誉汇总</a>
       <a href="#projects" class="block py-2 text-sm text-slate-300 hover:text-cyan-400">科研与工程</a>
       <a href="#patents" class="block py-2 text-sm text-slate-300 hover:text-cyan-400">发明专利与软著</a>
       <a href="#skills" class="block py-2 text-sm text-slate-300 hover:text-cyan-400">工程技术栈</a>
@@ -164,38 +149,39 @@
             你好，我是 <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-blue-500">张国树</span>
           </h1>
           <p class="text-xl sm:text-2xl text-slate-300 font-medium">
-            智能配电网自动化 · 嵌入式系统研发 · 创新创业攻坚者
+            智能配电网自动化 · 嵌入式系统与机器人 · 创新创业攻坚者
           </p>
         </div>
 
         <!-- Bio Quote / Intro -->
         <p class="text-slate-400 text-base sm:text-lg max-w-2xl leading-relaxed mx-auto lg:mx-0">
-          国家级“挑战杯”一等奖获得者，深耕10kV配电网故障智能感知自愈与嵌入式测控。拥有多项国家实用新型专利与省级大创立项经验，从硬件布线、单片机固件到配电网自愈算法，坚持严谨工程闭环。
+          第19届“挑战杯”全国一等奖获得者，深耕10kV配电网故障智能感知自愈与微秒级瞬态故障高速抓拍。主持及参与<strong>2项湖南省大学生创新训练计划省级重点立项</strong>，拥有<strong>4项国家实用新型专利</strong>（3项第二发明人）与计算机软著，兼备扎实硬件调测与智能车机器人竞演实战能力。
         </p>
 
         <!-- Call to Action Buttons -->
         <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
-          <a href="#projects" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200">
-            <i data-lucide="zap" class="w-4 h-4"></i>
-            <span>浏览工程与项目成果</span>
+          <a href="#honors-matrix" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200">
+            <i data-lucide="trophy" class="w-4 h-4"></i>
+            <span>查看 17 项完整获奖荣誉</span>
           </a>
           <button onclick="openPrintModal()" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-800/90 hover:bg-slate-700 border border-slate-700 text-slate-200 font-semibold hover:border-slate-500 transition-all duration-200">
             <i data-lucide="printer" class="w-4 h-4 text-cyan-400"></i>
-            <span>打印 / 导出简历 (PDF)</span>
+            <span>打印 / 导出 A4 标准简历</span>
           </button>
           <a href="#contact" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-slate-900/60 hover:bg-slate-800 border border-slate-800 text-slate-300 text-sm font-medium transition-all">
-            <i data-lucide="message-square" class="w-4 h-4"></i>
-            <span>微信 / 电话联系</span>
+            <i data-lucide="mail" class="w-4 h-4"></i>
+            <span>联系与合作</span>
           </a>
         </div>
 
         <!-- Quick Tags -->
         <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-2 text-xs text-slate-400 font-mono">
-          <span class="px-2.5 py-1 bg-slate-800/50 rounded-md border border-slate-700/50"># 挑战杯国奖</span>
-          <span class="px-2.5 py-1 bg-slate-800/50 rounded-md border border-slate-700/50"># 大创省银奖</span>
-          <span class="px-2.5 py-1 bg-slate-800/50 rounded-md border border-slate-700/50"># 4项国家专利</span>
-          <span class="px-2.5 py-1 bg-slate-800/50 rounded-md border border-slate-700/50"># FTU智能自愈</span>
-          <span class="px-2.5 py-1 bg-slate-800/50 rounded-md border border-slate-700/50"># 中国电源协会</span>
+          <span class="px-2.5 py-1 bg-slate-800/50 rounded-md border border-slate-700/50"># 挑战杯全国一等奖</span>
+          <span class="px-2.5 py-1 bg-slate-800/50 rounded-md border border-slate-700/50"># 大创省二等奖</span>
+          <span class="px-2.5 py-1 bg-slate-800/50 rounded-md border border-slate-700/50"># 创客中国市三等奖</span>
+          <span class="px-2.5 py-1 bg-slate-800/50 rounded-md border border-slate-700/50"># 2项省级大创立项</span>
+          <span class="px-2.5 py-1 bg-slate-800/50 rounded-md border border-slate-700/50"># 4项国家实用专利</span>
+          <span class="px-2.5 py-1 bg-slate-800/50 rounded-md border border-slate-700/50"># 智能车与机器人二等奖</span>
         </div>
 
       </div>
@@ -205,13 +191,13 @@
         <div class="relative group">
           
           <!-- Outer Neon Border Gradient -->
-          <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-3xl blur-xl opacity-30 group-hover:opacity-60 transition duration-500"></div>
+          <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-sky-400 to-blue-600 rounded-3xl blur-xl opacity-30 group-hover:opacity-60 transition duration-500"></div>
           
           <!-- Card Body -->
-          <div class="relative rounded-2xl bg-gradient-to-b from-slate-900/95 to-slate-950/95 border border-slate-750 p-6 backdrop-blur-xl shadow-2xl space-y-6">
+          <div class="relative rounded-2xl bg-gradient-to-b from-slate-900/95 to-slate-950/95 border border-slate-750 p-6 backdrop-blur-xl shadow-2xl space-y-5">
             
             <!-- Card Header: Profile Info -->
-            <div class="flex items-center justify-between border-b border-slate-800/80 pb-5">
+            <div class="flex items-center justify-between border-b border-slate-800/80 pb-4">
               <div class="flex items-center gap-3">
                 <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 via-blue-600 to-indigo-700 p-0.5 shadow-lg shadow-cyan-500/20">
                   <div class="w-full h-full bg-[#0a0f1a] rounded-[14px] flex items-center justify-center">
@@ -220,8 +206,8 @@
                 </div>
                 <div>
                   <h3 class="font-display font-bold text-lg text-white">张国树</h3>
-                  <p class="text-xs text-slate-400">电气工程及其自动化</p>
-                  <p class="text-[11px] text-cyan-400/90 font-mono">邵阳学院电气创新实验室</p>
+                  <p class="text-xs text-slate-400">电气工程及其自动化 · 24级电力3班班长</p>
+                  <p class="text-[11px] text-cyan-400/90 font-mono">创翼电子实验室负责人 · 中国电源协会会员</p>
                 </div>
               </div>
 
@@ -232,45 +218,46 @@
               </div>
             </div>
 
-            <!-- Highlights Checklist -->
-            <div class="space-y-3 text-xs">
-              <div class="flex items-center justify-between p-2.5 rounded-lg bg-slate-800/40 border border-slate-800">
-                <span class="text-slate-400 flex items-center gap-2">
-                  <i data-lucide="award" class="w-4 h-4 text-amberGold-400"></i> 挑战杯全国竞赛
-                </span>
-                <span class="font-semibold text-amberGold-400 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/20">国家级一等奖</span>
+            <!-- Quantitative Bento Highlights -->
+            <div class="grid grid-cols-2 gap-2 text-xs">
+              <div class="p-2.5 rounded-lg bg-slate-800/40 border border-slate-800">
+                <span class="text-amberGold-400 font-bold block text-sm">国家一等奖</span>
+                <span class="text-slate-400 text-[11px]">第19届挑战杯学术科技作品</span>
               </div>
-
-              <div class="flex items-center justify-between p-2.5 rounded-lg bg-slate-800/40 border border-slate-800">
-                <span class="text-slate-400 flex items-center gap-2">
-                  <i data-lucide="trending-up" class="w-4 h-4 text-sky-400"></i> 中国国际大学生创新大赛
-                </span>
-                <span class="font-semibold text-sky-300 bg-sky-500/10 px-2 py-0.5 rounded border border-sky-500/20">湖南省银奖</span>
+              <div class="p-2.5 rounded-lg bg-slate-800/40 border border-slate-800">
+                <span class="text-sky-400 font-bold block text-sm">省二等奖</span>
+                <span class="text-slate-400 text-[11px]">中国国际大学生创新大赛</span>
               </div>
-
-              <div class="flex items-center justify-between p-2.5 rounded-lg bg-slate-800/40 border border-slate-800">
-                <span class="text-slate-400 flex items-center gap-2">
-                  <i data-lucide="lightbulb" class="w-4 h-4 text-emerald-400"></i> 知识产权积累
-                </span>
-                <span class="font-semibold text-emerald-300 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">4项专利 + 1项软著</span>
+              <div class="p-2.5 rounded-lg bg-slate-800/40 border border-slate-800">
+                <span class="text-emerald-400 font-bold block text-sm">2项省级立项</span>
+                <span class="text-slate-400 text-[11px]">湖南省大学生创新创业训练计划</span>
               </div>
-
-              <div class="flex items-center justify-between p-2.5 rounded-lg bg-slate-800/40 border border-slate-800">
-                <span class="text-slate-400 flex items-center gap-2">
-                  <i data-lucide="tv" class="w-4 h-4 text-purple-400"></i> 国家级主流媒体
-                </span>
-                <span class="font-semibold text-purple-300 bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">央视CCTV专题报道</span>
+              <div class="p-2.5 rounded-lg bg-slate-800/40 border border-slate-800">
+                <span class="text-purple-400 font-bold block text-sm">4项专利+1软著</span>
+                <span class="text-slate-400 text-[11px]">光纤传感/连接器/排烟枪</span>
               </div>
             </div>
 
-            <!-- Terminal / Code Snippet Style Status -->
-            <div class="p-3 bg-[#06090e] rounded-xl border border-slate-800/90 font-mono text-[11px] text-slate-400 space-y-1">
-              <div class="text-slate-500 flex items-center justify-between">
-                <span>SYSTEM STATUS</span>
-                <span class="text-emerald-400 flex items-center gap-1">● ONLINE</span>
+            <!-- Campus & Honors Tag Bar -->
+            <div class="p-3 bg-slate-950/70 rounded-xl border border-slate-800/90 space-y-1.5 text-xs text-slate-300">
+              <div class="flex items-center justify-between text-slate-400">
+                <span>🤖 机器人/智能车竞赛</span>
+                <span class="text-cyan-400 font-medium">双校二等奖 + 校三等奖</span>
               </div>
-              <p class="text-slate-300">$ role: Class_Monitor && Lab_Director</p>
-              <p class="text-cyan-400">$ mission: "出门走路要把背挺直了走！"</p>
+              <div class="flex items-center justify-between text-slate-400">
+                <span>🎖️ 校级表彰与学业</span>
+                <span class="text-emerald-400 font-medium">校乙等奖学金 · 优秀共青团员</span>
+              </div>
+              <div class="flex items-center justify-between text-slate-400">
+                <span>🤝 社会实践</span>
+                <span class="text-amberGold-400 font-medium">社会实践先进个人 · 军训优秀学员</span>
+              </div>
+            </div>
+
+            <!-- Motto Snippet -->
+            <div class="p-2.5 bg-[#06090e] rounded-xl border border-slate-800/90 font-mono text-[11px] text-cyan-400/90 flex items-center justify-between">
+              <span>$ echo "出门走路要把背挺直了走！"</span>
+              <span class="text-emerald-400">● 严谨闭环</span>
             </div>
 
           </div>
@@ -287,15 +274,28 @@
         <div class="absolute -right-4 -bottom-4 w-24 h-24 bg-amber-500/5 rounded-full blur-xl group-hover:bg-amber-500/10 transition-colors"></div>
         <div class="flex items-center gap-3 text-amberGold-400 mb-2">
           <i data-lucide="trophy" class="w-5 h-5"></i>
-          <span class="text-xs uppercase font-mono tracking-wider text-slate-400">竞赛荣誉最高</span>
+          <span class="text-xs uppercase font-mono tracking-wider text-slate-400">最高竞赛荣誉</span>
         </div>
         <div class="text-3xl sm:text-4xl font-display font-extrabold text-white">
           <span class="text-amberGold-400">国一</span> 等奖
         </div>
-        <p class="text-xs text-slate-400 mt-2">第十九届“挑战杯”学术科技竞赛</p>
+        <p class="text-xs text-slate-400 mt-2">第19届“挑战杯”学术科技竞赛科技发明类</p>
       </div>
 
       <!-- Stat 2 -->
+      <div class="p-5 sm:p-6 rounded-2xl bg-slate-900/60 border border-slate-800/80 backdrop-blur-md relative overflow-hidden group hover:border-emerald-500/40 transition-all duration-300">
+        <div class="absolute -right-4 -bottom-4 w-24 h-24 bg-emerald-500/5 rounded-full blur-xl group-hover:bg-emerald-500/10 transition-colors"></div>
+        <div class="flex items-center gap-3 text-emerald-400 mb-2">
+          <i data-lucide="flask-conical" class="w-5 h-5"></i>
+          <span class="text-xs uppercase font-mono tracking-wider text-slate-400">省级大创立项</span>
+        </div>
+        <div class="text-3xl sm:text-4xl font-display font-extrabold text-white">
+          <span class="text-emerald-400">2</span> <span class="text-xl font-normal text-slate-400">项</span>
+        </div>
+        <p class="text-xs text-slate-400 mt-2">2026故障抓拍 + 2025功率移相均衡装置</p>
+      </div>
+
+      <!-- Stat 3 -->
       <div class="p-5 sm:p-6 rounded-2xl bg-slate-900/60 border border-slate-800/80 backdrop-blur-md relative overflow-hidden group hover:border-cyan-500/40 transition-all duration-300">
         <div class="absolute -right-4 -bottom-4 w-24 h-24 bg-cyan-500/5 rounded-full blur-xl group-hover:bg-cyan-500/10 transition-colors"></div>
         <div class="flex items-center gap-3 text-cyan-400 mb-2">
@@ -308,32 +308,396 @@
         <p class="text-xs text-slate-400 mt-2">4项国家实用新型专利 + 1项计算机软著</p>
       </div>
 
-      <!-- Stat 3 -->
-      <div class="p-5 sm:p-6 rounded-2xl bg-slate-900/60 border border-slate-800/80 backdrop-blur-md relative overflow-hidden group hover:border-emerald-500/40 transition-all duration-300">
-        <div class="absolute -right-4 -bottom-4 w-24 h-24 bg-emerald-500/5 rounded-full blur-xl group-hover:bg-emerald-500/10 transition-colors"></div>
-        <div class="flex items-center gap-3 text-emerald-400 mb-2">
-          <i data-lucide="flask-conical" class="w-5 h-5"></i>
-          <span class="text-xs uppercase font-mono tracking-wider text-slate-400">科研与大创攻坚</span>
-        </div>
-        <div class="text-3xl sm:text-4xl font-display font-extrabold text-white">
-          <span class="text-emerald-400">省级</span> 立项
-        </div>
-        <p class="text-xs text-slate-400 mt-2">湖南省大创重点立项 + 洞口县实地验收</p>
-      </div>
-
       <!-- Stat 4 -->
       <div class="p-5 sm:p-6 rounded-2xl bg-slate-900/60 border border-slate-800/80 backdrop-blur-md relative overflow-hidden group hover:border-purple-500/40 transition-all duration-300">
         <div class="absolute -right-4 -bottom-4 w-24 h-24 bg-purple-500/5 rounded-full blur-xl group-hover:bg-purple-500/10 transition-colors"></div>
         <div class="flex items-center gap-3 text-purple-400 mb-2">
-          <i data-lucide="users" class="w-5 h-5"></i>
-          <span class="text-xs uppercase font-mono tracking-wider text-slate-400">组织领导与会员</span>
+          <i data-lucide="bot" class="w-5 h-5"></i>
+          <span class="text-xs uppercase font-mono tracking-wider text-slate-400">机器人与智能车</span>
         </div>
         <div class="text-3xl sm:text-4xl font-display font-extrabold text-white">
-          <span class="text-purple-400">双责</span> 担当
+          <span class="text-purple-400">3</span> <span class="text-xl font-normal text-slate-400">项</span>
         </div>
-        <p class="text-xs text-slate-400 mt-2">班长 · 实验室主任 · 中国电源协会会员</p>
+        <p class="text-xs text-slate-400 mt-2">智能车校二等奖 · 机器人AI校二等奖 · 睿抗校三等奖</p>
       </div>
 
+    </section>
+
+    <!-- SECTION: AUTHORITATIVE HONORS MATRIX (17 ITEMS FULL SHOWCASE) -->
+    <section id="honors-matrix" class="space-y-8 scroll-mt-20">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="h-8 w-1.5 bg-gradient-to-b from-amber-400 to-amber-600 rounded-full"></div>
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-display font-bold text-white">获奖荣誉与履历宝库 (17项权威汇总)</h2>
+            <p class="text-xs sm:text-sm text-slate-400">涵盖国家级顶会、省级竞赛、机器人挑战、国家专利及校级表彰</p>
+          </div>
+        </div>
+
+        <!-- Filter tabs for Honors -->
+        <div class="flex items-center gap-1 p-1 bg-slate-900/90 rounded-xl border border-slate-800 text-xs overflow-x-auto">
+          <button onclick="filterHonors('all')" class="honor-tab-btn px-3 py-1.5 rounded-lg font-medium transition-all bg-amber-500/20 text-amber-300 border border-amber-500/30" data-hfilter="all">全部 (17)</button>
+          <button onclick="filterHonors('national')" class="honor-tab-btn px-3 py-1.5 rounded-lg font-medium transition-all text-slate-400 hover:text-white" data-hfilter="national">国/省/市重点赛 (3)</button>
+          <button onclick="filterHonors('robot')" class="honor-tab-btn px-3 py-1.5 rounded-lg font-medium transition-all text-slate-400 hover:text-white" data-hfilter="robot">智能车与机器人 (3)</button>
+          <button onclick="filterHonors('research')" class="honor-tab-btn px-3 py-1.5 rounded-lg font-medium transition-all text-slate-400 hover:text-white" data-hfilter="research">大创立项与专利 (6)</button>
+          <button onclick="filterHonors('scholarship')" class="honor-tab-btn px-3 py-1.5 rounded-lg font-medium transition-all text-slate-400 hover:text-white" data-hfilter="scholarship">奖学金与社会荣誉 (5)</button>
+        </div>
+      </div>
+
+      <!-- Honors Interactive Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="honors-grid-container">
+        
+        <!-- 1. 挑战杯国一 -->
+        <div class="honor-card p-5 rounded-2xl bg-gradient-to-b from-slate-900/90 to-slate-950 border border-amber-500/40 hover:border-amber-400 transition-all shadow-xl shadow-amber-500/5 flex flex-col justify-between" data-category="national">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 text-[11px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30 rounded">
+                ① 国家级一等奖
+              </span>
+              <span class="text-xs font-mono text-slate-400">2025 年度</span>
+            </div>
+            <h3 class="font-bold text-base text-white">第19届“挑战杯”全国大学生课外学术科技作品竞赛</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              作品《10kV高压线路自动化开关终端状态在线检测、故障智能感知与自主调控修复装置》。突破传统配网FTU蓄电池老化与单相接地高阻选线痛点。
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-800/80 mt-3 flex items-center justify-between text-[11px]">
+            <span class="text-amber-400 font-mono font-semibold">科技发明制作类 · 全国总决赛</span>
+            <button onclick="openImageModal('assets/cert_challenge_cup.jpg', '第19届挑战杯国家级一等奖证书')" class="text-cyan-400 hover:underline flex items-center gap-1">
+              查看证书 <i data-lucide="eye" class="w-3 h-3"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 2. 大创省二 -->
+        <div class="honor-card p-5 rounded-2xl bg-gradient-to-b from-slate-900/90 to-slate-950 border border-sky-500/30 hover:border-sky-400 transition-all shadow-xl shadow-sky-500/5 flex flex-col justify-between" data-category="national">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 text-[11px] font-bold bg-sky-500/20 text-sky-300 border border-sky-500/30 rounded">
+                ② 湖南省二等奖 (银奖)
+              </span>
+              <span class="text-xs font-mono text-slate-400">2025 年度</span>
+            </div>
+            <h3 class="font-bold text-base text-white">中国国际大学生创新大赛 (湖南省赛)</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              参赛赛道：高教主赛道本科生创意组。<br>
+              项目：《10kV配电网终端设备故障智慧感知自愈系统》。核心执笔商业计划书与路演方案，获评委高度认可。
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-800/80 mt-3 flex items-center justify-between text-[11px] text-slate-400">
+            <span>高教主赛道本科生创意组</span>
+            <i data-lucide="award" class="w-4 h-4 text-sky-400"></i>
+          </div>
+        </div>
+
+        <!-- 3. 创客中国市三 -->
+        <div class="honor-card p-5 rounded-2xl bg-gradient-to-b from-slate-900/90 to-slate-950 border border-slate-800 hover:border-cyan-500/40 transition-all flex flex-col justify-between" data-category="national">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 text-[11px] font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 rounded">
+                ③ 邵阳市复赛三等奖
+              </span>
+              <span class="text-xs font-mono text-slate-400">2025 年度</span>
+            </div>
+            <h3 class="font-bold text-base text-white">“创客中国”中小微企业创新创业大赛</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              邵阳市复赛创业组三等奖。代表项目落地转化参与中小企业组角逐，展现极佳的科技成果转化与产学研潜力。
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-800/80 mt-3 flex items-center justify-between text-[11px] text-slate-400">
+            <span>工信部中小企业局 / 湖南省工信厅</span>
+            <i data-lucide="trending-up" class="w-4 h-4 text-cyan-400"></i>
+          </div>
+        </div>
+
+        <!-- 4. 专利 探头封装 (第二发明人) -->
+        <div class="honor-card p-5 rounded-2xl bg-slate-900/70 border border-slate-800 hover:border-emerald-500/40 transition-all flex flex-col justify-between" data-category="research">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 text-[11px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 rounded">
+                ④ 国家实用新型专利
+              </span>
+              <span class="text-xs font-mono text-slate-400">2025.05</span>
+            </div>
+            <h3 class="font-bold text-base text-white">一种光纤传感探头封装结构</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              申请号：<span class="font-mono text-emerald-400">202521075151.3</span><br>
+              <strong>第二发明人</strong>。获国家知识产权局正式受理。应用于高压电气设备抗振与微型绝缘测温探头保护。
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-800/80 mt-3 flex items-center justify-between text-[11px] text-slate-400">
+            <span>国家知识产权局受理</span>
+            <span class="text-emerald-400 font-semibold">第二发明人</span>
+          </div>
+        </div>
+
+        <!-- 5. 专利 传感探头 (第二发明人) -->
+        <div class="honor-card p-5 rounded-2xl bg-slate-900/70 border border-slate-800 hover:border-emerald-500/40 transition-all flex flex-col justify-between" data-category="research">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 text-[11px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 rounded">
+                ⑤ 国家实用新型专利
+              </span>
+              <span class="text-xs font-mono text-slate-400">2025.05</span>
+            </div>
+            <h3 class="font-bold text-base text-white">一种光纤传感探头</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              申请号：<span class="font-mono text-emerald-400">202521098383.0</span><br>
+              <strong>第二发明人</strong>。获国家知识产权局正式受理。解决强电磁干扰环境下光信号损耗与电场耦合误差。
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-800/80 mt-3 flex items-center justify-between text-[11px] text-slate-400">
+            <span>国家知识产权局受理</span>
+            <span class="text-emerald-400 font-semibold">第二发明人</span>
+          </div>
+        </div>
+
+        <!-- 6. 专利 连接器结构 (第二发明人) -->
+        <div class="honor-card p-5 rounded-2xl bg-slate-900/70 border border-slate-800 hover:border-emerald-500/40 transition-all flex flex-col justify-between" data-category="research">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 text-[11px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 rounded">
+                ⑥ 国家实用新型专利
+              </span>
+              <span class="text-xs font-mono text-slate-400">2025.07</span>
+            </div>
+            <h3 class="font-bold text-base text-white">一种光纤连接器结构</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              申请号：<span class="font-mono text-emerald-400">202521558691.7</span><br>
+              <strong>第二发明人</strong>。获国家知识产权局正式受理。优化电力环网柜狭小空间内的快插自锁光纤耦合结构。
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-800/80 mt-3 flex items-center justify-between text-[11px] text-slate-400">
+            <span>国家知识产权局受理</span>
+            <span class="text-emerald-400 font-semibold">第二发明人</span>
+          </div>
+        </div>
+
+        <!-- 7. 专利 排烟枪设备 (第四发明人) -->
+        <div class="honor-card p-5 rounded-2xl bg-slate-900/70 border border-slate-800 hover:border-amber-500/40 transition-all flex flex-col justify-between" data-category="research">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 text-[11px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30 rounded">
+                ⑦ 国家实用新型专利
+              </span>
+              <span class="text-xs font-mono text-slate-400">2025.08</span>
+            </div>
+            <h3 class="font-bold text-base text-white">一种排烟枪设备</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              申请号：<span class="font-mono text-amber-400">202521854639.6</span><br>
+              <strong>第四发明人</strong>。获国家知识产权局受理。实物样机落地，并与城步县及大祥区消防联合录制科普宣教视频。
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-800/80 mt-3 flex items-center justify-between text-[11px] text-slate-400">
+            <span>实物样机 + 消防合作</span>
+            <button onclick="openImageModal('assets/product_smoke_gun.jpg', '排烟枪设备实物样机照片')" class="text-cyan-400 hover:underline flex items-center gap-1">
+              查看样机 <i data-lucide="eye" class="w-3 h-3"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 8. 2026省级大创立项 -->
+        <div class="honor-card p-5 rounded-2xl bg-slate-900/70 border border-slate-800 hover:border-purple-500/40 transition-all flex flex-col justify-between" data-category="research">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 text-[11px] font-bold bg-purple-500/20 text-purple-300 border border-purple-500/30 rounded">
+                ⑧ 湖南省大创重点立项
+              </span>
+              <span class="text-xs font-mono text-slate-400">2026 年度</span>
+            </div>
+            <h3 class="font-bold text-base text-white">输电线路故障图像高速捕获方法研究</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              邵阳学院大学生创新创业训练计划<strong>省级立项</strong>。项目负责人。攻坚电场脉冲瞬态主动触发与微秒快门图像防误捕获，获央视专题报道。
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-800/80 mt-3 flex items-center justify-between text-[11px] text-slate-400">
+            <span>湖南省教育厅审核批复</span>
+            <span class="text-purple-400 font-semibold">项目负责人</span>
+          </div>
+        </div>
+
+        <!-- 9. 2025省级大创立项 -->
+        <div class="honor-card p-5 rounded-2xl bg-slate-900/70 border border-slate-800 hover:border-emerald-500/40 transition-all flex flex-col justify-between" data-category="research">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 text-[11px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 rounded">
+                ⑨ 湖南省大创重点立项
+              </span>
+              <span class="text-xs font-mono text-slate-400">2025 年度</span>
+            </div>
+            <h3 class="font-bold text-base text-white">低压台区功率移相均衡装置的研制</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              邵阳学院大学生创新创业训练计划<strong>省级立项</strong>。核心骨干。研究低压配电网三相不平衡动态移相无缝转移与电力电子开关控制。
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-800/80 mt-3 flex items-center justify-between text-[11px] text-slate-400">
+            <span>湖南省教育厅审核批复</span>
+            <span class="text-emerald-400 font-semibold">核心研发成员</span>
+          </div>
+        </div>
+
+        <!-- 10. 乙等奖学金 -->
+        <div class="honor-card p-5 rounded-2xl bg-slate-900/70 border border-slate-800 hover:border-yellow-500/40 transition-all flex flex-col justify-between" data-category="scholarship">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 text-[11px] font-bold bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 rounded">
+                ⑩ 学业综合奖学金
+              </span>
+              <span class="text-xs font-mono text-slate-400">2024-2025</span>
+            </div>
+            <h3 class="font-bold text-base text-white">邵阳学院乙等奖学金</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              2024-2025学年度荣获邵阳学院乙等奖学金。专业综合成绩与素质测评名列前茅，理论课程与实践并进。
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-800/80 mt-3 flex items-center justify-between text-[11px] text-slate-400">
+            <span>学年综合考评奖项</span>
+            <i data-lucide="medal" class="w-4 h-4 text-yellow-400"></i>
+          </div>
+        </div>
+
+        <!-- 11. 智能汽车二等奖 -->
+        <div class="honor-card p-5 rounded-2xl bg-slate-900/70 border border-slate-800 hover:border-cyan-500/40 transition-all flex flex-col justify-between" data-category="robot">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 text-[11px] font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 rounded">
+                ⑪ 校级二等奖
+              </span>
+              <span class="text-xs font-mono text-slate-400">2026 年度</span>
+            </div>
+            <h3 class="font-bold text-base text-white">全国大学生智能汽车竞赛 (校选赛)</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              智能汽车大赛邵阳学院校级选拔赛<strong>二等奖</strong>。参与底层电机驱动调校、电磁与摄像头寻迹滤波算法开发，实战经验丰富。
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-800/80 mt-3 flex items-center justify-between text-[11px] text-slate-400">
+            <span>嵌入式硬件与循迹控制</span>
+            <i data-lucide="car" class="w-4 h-4 text-cyan-400"></i>
+          </div>
+        </div>
+
+        <!-- 12. 机器人及人工智能大赛二等奖 -->
+        <div class="honor-card p-5 rounded-2xl bg-slate-900/70 border border-slate-800 hover:border-blue-500/40 transition-all flex flex-col justify-between" data-category="robot">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 text-[11px] font-bold bg-blue-500/20 text-blue-300 border border-blue-500/30 rounded">
+                ⑫ 校级二等奖
+              </span>
+              <span class="text-xs font-mono text-slate-400">2026 年度</span>
+            </div>
+            <h3 class="font-bold text-base text-white">中国机器人及人工智能大赛 (校选赛)</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              中国机器人及人工智能大赛邵阳学院选拔赛<strong>二等奖</strong>。攻关机器人运动控制逻辑与目标识别协同，积累了前沿跨学科工程经验。
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-800/80 mt-3 flex items-center justify-between text-[11px] text-slate-400">
+            <span>机器人与AI算法竞演</span>
+            <i data-lucide="bot" class="w-4 h-4 text-blue-400"></i>
+          </div>
+        </div>
+
+        <!-- 13. 睿抗机器人三等奖 -->
+        <div class="honor-card p-5 rounded-2xl bg-slate-900/70 border border-slate-800 hover:border-indigo-500/40 transition-all flex flex-col justify-between" data-category="robot">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 text-[11px] font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 rounded">
+                ⑬ 校级三等奖
+              </span>
+              <span class="text-xs font-mono text-slate-400">2026 年度</span>
+            </div>
+            <h3 class="font-bold text-base text-white">睿抗机器人开发者大赛 (RAICOM校选赛)</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              睿抗机器人开发者大赛邵阳学院校选赛<strong>三等奖</strong>。负责机器人机械与电气接口协同及软硬件联调。
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-800/80 mt-3 flex items-center justify-between text-[11px] text-slate-400">
+            <span>系统级软硬件协同开发</span>
+            <i data-lucide="cpu" class="w-4 h-4 text-indigo-400"></i>
+          </div>
+        </div>
+
+        <!-- 14. 思政课研究性学习三等奖 -->
+        <div class="honor-card p-5 rounded-2xl bg-slate-900/70 border border-slate-800 hover:border-red-500/40 transition-all flex flex-col justify-between" data-category="scholarship">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 text-[11px] font-bold bg-red-500/20 text-red-300 border border-red-500/30 rounded">
+                ⑭ 校级三等奖
+              </span>
+              <span class="text-xs font-mono text-slate-400">2026 年度</span>
+            </div>
+            <h3 class="font-bold text-base text-white">第12届思政课研究性学习成果展示竞赛</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              在邵阳学院学习贯彻习近平新时代中国特色社会主义思想第十二届思政课研究性学习成果展示竞赛中荣获<strong>三等奖</strong>。
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-800/80 mt-3 flex items-center justify-between text-[11px] text-slate-400">
+            <span>思想理论与社科调研</span>
+            <i data-lucide="book-open" class="w-4 h-4 text-red-400"></i>
+          </div>
+        </div>
+
+        <!-- 15. 优秀共青团员 -->
+        <div class="honor-card p-5 rounded-2xl bg-slate-900/70 border border-slate-800 hover:border-red-400/40 transition-all flex flex-col justify-between" data-category="scholarship">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 text-[11px] font-bold bg-red-500/20 text-red-300 border border-red-500/30 rounded">
+                ⑮ 优秀共青团员
+              </span>
+              <span class="text-xs font-mono text-slate-400">2024 年度</span>
+            </div>
+            <h3 class="font-bold text-base text-white">邵阳学院“优秀共青团员”荣誉称号</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              思想端正、热心服务同学。作为班长和入党积极分子，在班级建设、团支部组织生活会中发挥优异的先锋模范带头作用。
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-800/80 mt-3 flex items-center justify-between text-[11px] text-slate-400">
+            <span>共青团邵阳学院委员会表彰</span>
+            <i data-lucide="heart-handshake" class="w-4 h-4 text-red-400"></i>
+          </div>
+        </div>
+
+        <!-- 16. 社会实践先进个人 -->
+        <div class="honor-card p-5 rounded-2xl bg-slate-900/70 border border-slate-800 hover:border-amber-400/40 transition-all flex flex-col justify-between" data-category="scholarship">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 text-[11px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30 rounded">
+                ⑯ 社会实践先进个人
+              </span>
+              <span class="text-xs font-mono text-slate-400">2025 年度</span>
+            </div>
+            <h3 class="font-bold text-base text-white">“邵阳学院社会实践活动先进个人”</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              积极参与社会调查与科普宣传。深入消防基层大队宣传排烟枪装备、参与供电公司配网工程实测，将工科所学奉献于社会。
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-800/80 mt-3 flex items-center justify-between text-[11px] text-slate-400">
+            <span>邵阳学院全校表彰</span>
+            <i data-lucide="compass" class="w-4 h-4 text-amber-400"></i>
+          </div>
+        </div>
+
+        <!-- 17. 军训优秀学员 -->
+        <div class="honor-card p-5 rounded-2xl bg-slate-900/70 border border-slate-800 hover:border-green-500/40 transition-all flex flex-col justify-between" data-category="scholarship">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 text-[11px] font-bold bg-green-500/20 text-green-300 border border-green-500/30 rounded">
+                ⑰ 军训优秀学员
+              </span>
+              <span class="text-xs font-mono text-slate-400">2024 年度</span>
+            </div>
+            <h3 class="font-bold text-base text-white">新生军事技能训练“优秀学员”称号</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              在新生军事技能训练中作风优良、服从指挥、坚韧不拔，表现突出，荣获邵阳学院武装部与军训团联合授予“优秀学员”荣誉称号。
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-800/80 mt-3 flex items-center justify-between text-[11px] text-slate-400">
+            <span>邵阳学院武装部 / 军训团</span>
+            <i data-lucide="shield-check" class="w-4 h-4 text-green-400"></i>
+          </div>
+        </div>
+
+      </div>
     </section>
 
     <!-- SECTION: ABOUT ME & STORY -->
@@ -382,7 +746,7 @@
               <i data-lucide="user-check" class="w-4 h-4 text-cyan-400"></i> 基本学业与履历事实
             </h3>
             
-            <ul class="space-y-3.5 text-xs">
+            <ul class="space-y-3 text-xs">
               <li class="flex justify-between pb-2 border-b border-slate-800/60">
                 <span class="text-slate-400">学校 / 学院</span>
                 <span class="text-white font-medium text-right">邵阳学院 / 电气工程学院</span>
@@ -424,137 +788,6 @@
             <i data-lucide="external-link" class="w-3.5 h-3.5 text-slate-400 ml-auto"></i>
           </div>
 
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SECTION: CORE AWARDS & HONORS -->
-    <section id="awards" class="space-y-8 scroll-mt-20">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div class="flex items-center gap-3">
-          <div class="h-8 w-1.5 bg-gradient-to-b from-amber-400 to-amber-600 rounded-full"></div>
-          <div>
-            <h2 class="text-2xl sm:text-3xl font-display font-bold text-white">核心荣誉与竞赛成就</h2>
-            <p class="text-xs sm:text-sm text-slate-400">国家级、省级重要竞赛及社会权威荣誉</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Awards Cards Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-        <!-- Award 1: Challenge Cup National 1st -->
-        <div class="p-6 rounded-2xl bg-gradient-to-b from-slate-900/90 to-slate-950 border border-amber-500/30 hover:border-amber-400/70 transition-all duration-300 shadow-xl shadow-amber-500/5 flex flex-col justify-between group">
-          <div class="space-y-4">
-            <div class="flex items-start justify-between">
-              <span class="px-2.5 py-1 text-[11px] font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/30 rounded-md">
-                🏆 国家级最高荣誉
-              </span>
-              <span class="text-xs font-mono text-slate-400">2025 年度</span>
-            </div>
-
-            <div>
-              <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition-colors">
-                第十九届“挑战杯”大学生课外学术科技作品竞赛
-              </h3>
-              <p class="text-xs text-amber-300/90 font-mono mt-1 font-semibold">国家级 · 一等奖</p>
-            </div>
-
-            <p class="text-xs text-slate-300 leading-relaxed">
-              参赛作品：《10kV高压线路自动化开关终端状态在线检测、故障智能感知与自主调控修复装置》。突破传统配网FTU蓄电池老化难测与高阻单相接地选线难题。
-            </p>
-
-            <!-- Certificate preview trigger -->
-            <div class="relative overflow-hidden rounded-xl border border-slate-700/80 cursor-pointer group/img" onclick="openImageModal('assets/cert_challenge_cup.jpg', '挑战杯大学生课外学术科技作品竞赛 一等奖证书')">
-              <img src="assets/cert_challenge_cup.jpg" alt="挑战杯一等奖证书" class="w-full h-32 object-cover object-top group-hover/img:scale-105 transition-transform duration-300">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-2.5">
-                <span class="text-[11px] text-amber-300 flex items-center gap-1 font-medium">
-                  <i data-lucide="maximize-2" class="w-3 h-3"></i> 查看国奖荣誉证书原件
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-400">
-            <span>主导工作：系统方案、路演材料与硬件调测</span>
-            <i data-lucide="check-circle" class="w-4 h-4 text-amber-400"></i>
-          </div>
-        </div>
-
-        <!-- Award 2: International Innovation Competition Silver -->
-        <div class="p-6 rounded-2xl bg-gradient-to-b from-slate-900/90 to-slate-950 border border-sky-500/30 hover:border-sky-400/70 transition-all duration-300 shadow-xl shadow-sky-500/5 flex flex-col justify-between group">
-          <div class="space-y-4">
-            <div class="flex items-start justify-between">
-              <span class="px-2.5 py-1 text-[11px] font-semibold bg-sky-500/20 text-sky-300 border border-sky-500/30 rounded-md">
-                🥈 省级重点赛事
-              </span>
-              <span class="text-xs font-mono text-slate-400">2025.07</span>
-            </div>
-
-            <div>
-              <h3 class="text-lg font-bold text-white group-hover:text-sky-300 transition-colors">
-                中国国际大学生创新大赛 (大创)
-              </h3>
-              <p class="text-xs text-sky-300/90 font-mono mt-1 font-semibold">湖南省 · 银奖</p>
-            </div>
-
-            <p class="text-xs text-slate-300 leading-relaxed">
-              参赛项目：《10kV配电网终端设备故障智慧感知自愈系统》。深度融合商业化路演与工程转化方案，解决配电网“停电排查慢、人工运维险”的行业痛点。
-            </p>
-
-            <div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800 text-xs text-slate-300 space-y-1.5">
-              <div class="flex items-center gap-2 text-cyan-400 font-medium">
-                <i data-lucide="check" class="w-3.5 h-3.5"></i> 商业计划书与全套路演PPT核心执笔
-              </div>
-              <div class="flex items-center gap-2 text-cyan-400 font-medium">
-                <i data-lucide="check" class="w-3.5 h-3.5"></i> 湖南省高教主赛道高分突围获银奖
-              </div>
-            </div>
-          </div>
-
-          <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-400">
-            <span>主办：教育部等十二部委 / 湖南省教育厅</span>
-            <i data-lucide="award" class="w-4 h-4 text-sky-400"></i>
-          </div>
-        </div>
-
-        <!-- Award 3: CCTV Coverage & Maker China -->
-        <div class="p-6 rounded-2xl bg-gradient-to-b from-slate-900/90 to-slate-950 border border-purple-500/30 hover:border-purple-400/70 transition-all duration-300 shadow-xl shadow-purple-500/5 flex flex-col justify-between group">
-          <div class="space-y-4">
-            <div class="flex items-start justify-between">
-              <span class="px-2.5 py-1 text-[11px] font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30 rounded-md">
-                📺 央视专项报道 & 创客中国
-              </span>
-              <span class="text-xs font-mono text-slate-400">2025.10</span>
-            </div>
-
-            <div>
-              <h3 class="text-lg font-bold text-white group-hover:text-purple-300 transition-colors">
-                央视CCTV报道 & 创客中国省赛
-              </h3>
-              <p class="text-xs text-purple-300/90 font-mono mt-1 font-semibold">主流媒体关注 / 省级创客企业组</p>
-            </div>
-
-            <p class="text-xs text-slate-300 leading-relaxed">
-              团队“输电线路故障图像高速主动抓拍与多源感知装置”科研成果获中国中央电视台（CCTV）专项深度报道，并入围“创客中国”湖南省中小企业创新创业大赛。
-            </p>
-
-            <!-- CCTV Image Preview -->
-            <div class="relative overflow-hidden rounded-xl border border-slate-700/80 cursor-pointer group/img" onclick="openImageModal('assets/cctv_report.png', '团队科研成果获央视专项报道截图')">
-              <img src="assets/cctv_report.png" alt="央视报道截图" class="w-full h-32 object-cover group-hover/img:scale-105 transition-transform duration-300">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-2.5">
-                <span class="text-[11px] text-purple-300 flex items-center gap-1 font-medium">
-                  <i data-lucide="maximize-2" class="w-3 h-3"></i> 查看央视专题报道证据
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-400">
-            <span>实测：邵阳雪峰山实地恶劣气候应用检验</span>
-            <i data-lucide="video" class="w-4 h-4 text-purple-400"></i>
-          </div>
         </div>
 
       </div>
@@ -645,13 +878,13 @@
           </div>
         </div>
 
-        <!-- Project 2: High-Speed Transient Fault Capture (CCTV Reported) -->
+        <!-- Project 2: High-Speed Transient Fault Capture (CCTV Reported & 2026 Provincial Project) -->
         <div class="project-card p-6 sm:p-7 rounded-2xl bg-slate-900/70 border border-slate-800/90 hover:border-cyan-500/50 backdrop-blur-md transition-all duration-300 flex flex-col justify-between group space-y-6" data-category="grid hardware">
           <div class="space-y-4">
             
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 text-xs font-semibold rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">
-                CCTV报道成果 · 14版技术迭代攻坚
+                2026省级大创立项 · CCTV报道 · 14版迭代
               </span>
               <span class="text-xs font-mono text-slate-400">2025 - 2026</span>
             </div>
@@ -666,7 +899,7 @@
             </div>
 
             <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              针对架空输电线路雷击、树障、外破等瞬态故障（持续仅十几毫秒至百毫秒）传统视频监控无法捕捉真实起因的难题。研发<strong>微秒级光学与电场复合主动触发机制</strong>，实现故障瞬间纳秒/微秒级图像高速抓拍。
+              针对架空输电线路雷击、树障、外破等瞬态故障（持续仅十几毫秒至百毫秒）传统视频监控无法捕捉真实起因的难题。研发<strong>微秒级光学与电场复合主动触发机制</strong>，实现故障瞬间纳秒/微秒级图像高速抓拍。已正式获批<strong>2026年湖南省大学生创新训练计划省级立项</strong>。
             </p>
 
             <div class="grid grid-cols-2 gap-2 text-xs">
@@ -710,13 +943,13 @@
           </div>
         </div>
 
-        <!-- Project 3: Low-Voltage Power Phase-Shifting Equalizer (Provincial Innovation Project) -->
+        <!-- Project 3: Low-Voltage Power Phase-Shifting Equalizer (2025 Provincial Innovation Project) -->
         <div class="project-card p-6 sm:p-7 rounded-2xl bg-slate-900/70 border border-slate-800/90 hover:border-emerald-500/50 backdrop-blur-md transition-all duration-300 flex flex-col justify-between group space-y-6" data-category="grid hardware">
           <div class="space-y-4">
             
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 text-xs font-semibold rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                湖南省大学生创新训练计划 · 省级立项
+                2025省级大创立项 · 重点项目
               </span>
               <span class="text-xs font-mono text-slate-400">2025.06 - 至今</span>
             </div>
@@ -773,12 +1006,12 @@
                 便携式多功能排烟枪设备研制与应急科普转化
               </h3>
               <p class="text-xs text-slate-400 mt-1 font-mono">
-                专利发明人之一 · 负责气动导流优化、产品样机制作与消防实操解说
+                专利第四发明人 · 负责气动导流优化、产品样机制作与消防实操解说
               </p>
             </div>
 
             <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              专为火灾密闭走廊、地下隧道及狭小空间打造的高压导流排烟装备。已正式申报国家实用新型专利（专利号：<span class="font-mono text-amber-300">2025218546396</span>），并与湖南城步县消防救援大队、大祥区消防深入合作拍摄救援宣教视频。
+              专为火灾密闭走廊、地下隧道及狭小空间打造的高压导流排烟装备。已正式申报国家实用新型专利（专利申请号：<span class="font-mono text-amber-300">202521854639.6</span>），并与湖南城步县消防救援大队、大祥区消防深入合作拍摄救援宣教视频。
             </p>
 
             <!-- Product Photo Thumbnail -->
@@ -806,8 +1039,8 @@
       <div class="flex items-center gap-3">
         <div class="h-8 w-1.5 bg-gradient-to-b from-emerald-400 to-teal-600 rounded-full"></div>
         <div>
-          <h2 class="text-2xl sm:text-3xl font-display font-bold text-white">发明专利与软件著作权</h2>
-          <p class="text-xs sm:text-sm text-slate-400">经国家知识产权局与版权局受理 / 登记的硬核成果</p>
+          <h2 class="text-2xl sm:text-3xl font-display font-bold text-white">发明专利与软件著作权矩阵</h2>
+          <p class="text-xs sm:text-sm text-slate-400">国家知识产权局与国家版权局正规受理事权档案</p>
         </div>
       </div>
 
@@ -817,13 +1050,13 @@
         <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-emerald-500/40 transition-all space-y-3">
           <div class="flex items-center justify-between">
             <span class="px-2 py-0.5 text-[10px] font-mono bg-emerald-500/10 text-emerald-400 rounded border border-emerald-500/20">实用新型专利</span>
-            <span class="text-[11px] text-slate-500 font-mono">2025.08.28</span>
+            <span class="text-[11px] text-slate-500 font-mono">2025.05</span>
           </div>
-          <h4 class="font-bold text-sm text-white">一种排烟枪设备</h4>
-          <p class="text-xs text-slate-400">申请号：<span class="font-mono text-slate-300">2025218546396</span></p>
-          <p class="text-[11px] text-slate-500">发明人：欧阳益民, 钟锦涛, 刘白杨, <strong>张国树</strong></p>
-          <div class="pt-2 border-t border-slate-800/80 text-[11px] text-emerald-400 flex items-center gap-1">
-            <i data-lucide="check-check" class="w-3 h-3"></i> 样机落地与消防合作
+          <h4 class="font-bold text-sm text-white">一种光纤传感探头封装结构</h4>
+          <p class="text-xs text-slate-400">申请号：<span class="font-mono text-slate-300">202521075151.3</span></p>
+          <p class="text-[11px] text-emerald-400 font-semibold">第二发明人 · 国知局受理</p>
+          <div class="pt-2 border-t border-slate-800/80 text-[11px] text-slate-400 flex items-center gap-1">
+            <i data-lucide="shield-check" class="w-3 h-3 text-emerald-400"></i> 电气高压绝缘与抗震封装
           </div>
         </div>
 
@@ -831,13 +1064,13 @@
         <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-emerald-500/40 transition-all space-y-3">
           <div class="flex items-center justify-between">
             <span class="px-2 py-0.5 text-[10px] font-mono bg-emerald-500/10 text-emerald-400 rounded border border-emerald-500/20">实用新型专利</span>
-            <span class="text-[11px] text-slate-500 font-mono">2025.05.28</span>
+            <span class="text-[11px] text-slate-500 font-mono">2025.05</span>
           </div>
-          <h4 class="font-bold text-sm text-white">一种光纤传感探头封装结构</h4>
-          <p class="text-xs text-slate-400">申请号：<span class="font-mono text-slate-300">2025210751513</span></p>
-          <p class="text-[11px] text-slate-500">应用场景：高压电网绝缘与光纤测温防震</p>
-          <div class="pt-2 border-t border-slate-800/80 text-[11px] text-emerald-400 flex items-center gap-1">
-            <i data-lucide="check-check" class="w-3 h-3"></i> 国家知识产权局受理
+          <h4 class="font-bold text-sm text-white">一种光纤传感探头</h4>
+          <p class="text-xs text-slate-400">申请号：<span class="font-mono text-slate-300">202521098383.0</span></p>
+          <p class="text-[11px] text-emerald-400 font-semibold">第二发明人 · 国知局受理</p>
+          <div class="pt-2 border-t border-slate-800/80 text-[11px] text-slate-400 flex items-center gap-1">
+            <i data-lucide="shield-check" class="w-3 h-3 text-emerald-400"></i> 多源参量微型化传感
           </div>
         </div>
 
@@ -845,31 +1078,48 @@
         <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-emerald-500/40 transition-all space-y-3">
           <div class="flex items-center justify-between">
             <span class="px-2 py-0.5 text-[10px] font-mono bg-emerald-500/10 text-emerald-400 rounded border border-emerald-500/20">实用新型专利</span>
-            <span class="text-[11px] text-slate-500 font-mono">2025.05.30</span>
+            <span class="text-[11px] text-slate-500 font-mono">2025.07</span>
           </div>
-          <h4 class="font-bold text-sm text-white">一种光纤传感探头</h4>
-          <p class="text-xs text-slate-400">申请号：<span class="font-mono text-slate-300">2025210983830</span></p>
-          <p class="text-[11px] text-slate-500">应用场景：输配电线路多源参量微型化传感</p>
-          <div class="pt-2 border-t border-slate-800/80 text-[11px] text-emerald-400 flex items-center gap-1">
-            <i data-lucide="check-check" class="w-3 h-3"></i> 国家知识产权局受理
+          <h4 class="font-bold text-sm text-white">一种光纤连接器结构</h4>
+          <p class="text-xs text-slate-400">申请号：<span class="font-mono text-slate-300">202521558691.7</span></p>
+          <p class="text-[11px] text-emerald-400 font-semibold">第二发明人 · 国知局受理</p>
+          <div class="pt-2 border-t border-slate-800/80 text-[11px] text-slate-400 flex items-center gap-1">
+            <i data-lucide="shield-check" class="w-3 h-3 text-emerald-400"></i> 快插式精密光纤自锁
           </div>
         </div>
 
-        <!-- Patent 4 / Copyright -->
-        <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 transition-all space-y-3">
+        <!-- Patent 4 -->
+        <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-amber-500/40 transition-all space-y-3">
           <div class="flex items-center justify-between">
-            <span class="px-2 py-0.5 text-[10px] font-mono bg-cyan-500/10 text-cyan-400 rounded border border-cyan-500/20">计算机软件著作权</span>
-            <span class="text-[11px] text-slate-500 font-mono">2025.08.05</span>
+            <span class="px-2 py-0.5 text-[10px] font-mono bg-amber-500/10 text-amber-400 rounded border border-amber-500/20">实用新型专利</span>
+            <span class="text-[11px] text-slate-500 font-mono">2025.08</span>
           </div>
-          <h4 class="font-bold text-sm text-white">FTU备电工作环境温湿度检测系统</h4>
-          <p class="text-xs text-slate-400">登记号：<span class="font-mono text-slate-300">2025SR1454812</span></p>
-          <p class="text-[11px] text-slate-500">版本：V5.0 · 著作权人：邵阳学院</p>
-          <div class="pt-2 border-t border-slate-800/80 text-[11px] text-cyan-400 flex items-center gap-1">
-            <i data-lucide="check-check" class="w-3 h-3"></i> 国家版权局正式发证
+          <h4 class="font-bold text-sm text-white">一种排烟枪设备</h4>
+          <p class="text-xs text-slate-400">申请号：<span class="font-mono text-slate-300">202521854639.6</span></p>
+          <p class="text-[11px] text-amber-400 font-semibold">第四发明人 · 国知局受理</p>
+          <div class="pt-2 border-t border-slate-800/80 text-[11px] text-slate-400 flex items-center gap-1">
+            <i data-lucide="shield-check" class="w-3 h-3 text-amber-400"></i> 实物样机与消防科普
           </div>
         </div>
 
       </div>
+
+      <!-- Copyright full banner -->
+      <div class="p-5 rounded-xl bg-slate-900/60 border border-cyan-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-cyan-500/20 flex items-center justify-center text-cyan-400">
+            <i data-lucide="code" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-sm text-white">计算机软件著作权：《FTU备用电源工作环境温湿度检测系统 V5.0》</h4>
+            <p class="text-xs text-slate-400 font-mono">国家版权局登记号：2025SR1454812 · 著作权人：邵阳学院 · 日期：2025.08.05</p>
+          </div>
+        </div>
+        <span class="px-3 py-1 bg-cyan-500/10 text-cyan-300 rounded-lg text-xs font-semibold border border-cyan-500/20 flex-shrink-0">
+          已正式发证
+        </span>
+      </div>
+
     </section>
 
     <!-- SECTION: SKILLS & TECHNICAL STACK -->
@@ -878,7 +1128,7 @@
         <div class="h-8 w-1.5 bg-gradient-to-b from-blue-400 to-indigo-600 rounded-full"></div>
         <div>
           <h2 class="text-2xl sm:text-3xl font-display font-bold text-white">工程技术栈与专业素养</h2>
-          <p class="text-xs sm:text-sm text-slate-400">软硬件协同、工业电气与科研转化综合能力</p>
+          <p class="text-xs sm:text-sm text-slate-400">软硬件协同、工业电气、智能车机器人与科研转化综合能力</p>
         </div>
       </div>
 
@@ -888,7 +1138,7 @@
         <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
           <div class="flex items-center gap-3 text-cyan-400 border-b border-slate-800 pb-3">
             <i data-lucide="cpu" class="w-5 h-5"></i>
-            <h3 class="font-bold text-base text-white">单片机与嵌入式硬件</h3>
+            <h3 class="font-bold text-base text-white">单片机与智能车竞赛</h3>
           </div>
           
           <ul class="space-y-3 text-xs text-slate-300">
@@ -897,12 +1147,12 @@
               <p class="text-slate-400 leading-normal">熟悉STM32F1/F4标准库及HAL库、Keil MDK开发，熟练编写PWM、ADC滤波采样与中断服务程序。</p>
             </li>
             <li class="p-2.5 rounded-lg bg-slate-950/60 border border-slate-850">
-              <div class="font-semibold text-white mb-1">工业总线与通信协议</div>
-              <p class="text-slate-400 leading-normal">熟练掌握I2C、SPI、UART串行总线通信，MODBUS-RTU工业通信规约，驱动OLED、温湿度传感器及各类模组。</p>
+              <div class="font-semibold text-white mb-1">智能车与机器人控制</div>
+              <p class="text-slate-400 leading-normal">智能汽车与中国机器人及人工智能大赛校二等奖经验，熟练掌握电机PID闭环驱动、传感器滤波与循迹判据。</p>
             </li>
             <li class="p-2.5 rounded-lg bg-slate-950/60 border border-slate-850">
-              <div class="font-semibold text-white mb-1">电路制作与系统调试</div>
-              <p class="text-slate-400 leading-normal">掌握电路原理图与PCB制作流程，熟练使用示波器、信号发生器、逻辑分析仪进行故障排除。</p>
+              <div class="font-semibold text-white mb-1">工业总线与通信协议</div>
+              <p class="text-slate-400 leading-normal">熟练掌握I2C、SPI、UART串行总线通信，MODBUS-RTU工业通信规约，驱动温湿度探头与显示器件。</p>
             </li>
           </ul>
         </div>
@@ -948,7 +1198,7 @@
             </li>
             <li class="p-2.5 rounded-lg bg-slate-950/60 border border-slate-850">
               <div class="font-semibold text-white mb-1">实验室管理与班级统筹</div>
-              <p class="text-slate-400 leading-normal">担任班长统领班集体，担任创翼电子实验室负责人组织多项电子竞赛与培训，具备极佳的团队执行力。</p>
+              <p class="text-slate-400 leading-normal">担任24级电力3班班长、创翼电子实验室负责人，荣获邵阳学院优秀共青团员、社会实践先进个人等表彰。</p>
             </li>
           </ul>
         </div>
@@ -974,11 +1224,11 @@
           <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-cyan-500 border-4 border-[#080c14] group-hover:scale-125 transition-transform"></div>
           <div class="space-y-1">
             <div class="flex items-center gap-3">
-              <span class="text-xs font-mono text-cyan-400 font-semibold">2026年 - 至今</span>
-              <span class="px-2 py-0.5 text-[10px] bg-cyan-500/10 text-cyan-300 rounded border border-cyan-500/20">进行中</span>
+              <span class="text-xs font-mono text-cyan-400 font-semibold">2026年</span>
+              <span class="px-2 py-0.5 text-[10px] bg-cyan-500/10 text-cyan-300 rounded border border-cyan-500/20">大创立项 / 竞赛连捷</span>
             </div>
-            <h4 class="text-base font-bold text-white">输电线路瞬态故障主动抓拍装置核心算法攻关</h4>
-            <p class="text-xs text-slate-400">推进大创课题深造，攻坚故障瞬间光电电场复合触发机制与多源特征融合分类，开展极端自然气候长效自愈测试。</p>
+            <h4 class="text-base font-bold text-white">大创《输电线路故障图像高速捕获方法研究》获批省级立项 · 智能车与机器人大赛斩获双二等奖</h4>
+            <p class="text-xs text-slate-400">作为项目负责人获批湖南省大学生创新训练计划重点省级立项；斩获全国智能汽车大赛校级二等奖、中国机器人及人工智能大赛校级二等奖、睿抗开发者校赛三等奖、思政课学习成果三等奖。</p>
           </div>
         </div>
 
@@ -990,8 +1240,8 @@
               <span class="text-xs font-mono text-purple-400 font-semibold">2025.10 - 2025.11</span>
               <span class="px-2 py-0.5 text-[10px] bg-purple-500/10 text-purple-300 rounded border border-purple-500/20">工程验收 / 媒体专访</span>
             </div>
-            <h4 class="text-base font-bold text-white">洞口县配网环网柜现场汇报验收 · 获央视CCTV报道</h4>
-            <p class="text-xs text-slate-400">在邵阳洞口县供电公司进行配电终端自愈系统现场答辩与技术验收；同年科研成果获中央电视台专项报道，正式入选中国电源协会会员。</p>
+            <h4 class="text-base font-bold text-white">洞口县配网环网柜现场汇报验收 · 获央视CCTV专题报道</h4>
+            <p class="text-xs text-slate-400">在邵阳洞口县供电公司进行配电终端自愈系统现场答辩与技术验收；同年科研成果获中央电视台专项报道，正式入选中国电源协会会员，荣获“社会实践活动先进个人”。</p>
           </div>
         </div>
 
@@ -1001,10 +1251,10 @@
           <div class="space-y-1">
             <div class="flex items-center gap-3">
               <span class="text-xs font-mono text-amber-400 font-semibold">2025.07 - 2025.08</span>
-              <span class="px-2 py-0.5 text-[10px] bg-amber-500/10 text-amber-300 rounded border border-amber-500/20">大创省银 / 专利申报</span>
+              <span class="px-2 py-0.5 text-[10px] bg-amber-500/10 text-amber-300 rounded border border-amber-500/20">大创省二 / 创客中国 / 4项专利</span>
             </div>
-            <h4 class="text-base font-bold text-white">中国国际大学生创新大赛（湖南省银奖） & 4项专利申报</h4>
-            <p class="text-xs text-slate-400">主笔项目商业计划书获省级高教主赛道银奖；申报排烟枪设备、光纤传感封装等实用新型专利，并获批软件著作权。</p>
+            <h4 class="text-base font-bold text-white">中国国际大学生创新大赛省二等奖 · “创客中国”邵阳市三等奖 · 申报4项专利</h4>
+            <p class="text-xs text-slate-400">主笔商业计划书荣获创新大赛湖南省高教主赛道二等奖；获“创客中国”邵阳市复赛三等奖；连续申报光纤传感探头封装、探头、连接器（均为第二发明人）及排烟枪（第四发明人）等4项实用新型专利并获批软件著作权。</p>
           </div>
         </div>
 
@@ -1013,11 +1263,11 @@
           <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-amberGold-400 border-4 border-[#080c14] group-hover:scale-125 transition-transform"></div>
           <div class="space-y-1">
             <div class="flex items-center gap-3">
-              <span class="text-xs font-mono text-amberGold-400 font-semibold">2025.06</span>
+              <span class="text-xs font-mono text-amberGold-400 font-semibold">2025.05 - 2025.06</span>
               <span class="px-2 py-0.5 text-[10px] bg-amber-500/20 text-amberGold-400 rounded border border-amber-500/40 font-bold">挑战杯国家级一等奖</span>
             </div>
-            <h4 class="text-base font-bold text-white">第十九届“挑战杯”全国大学生课外学术科技作品竞赛 一等奖</h4>
-            <p class="text-xs text-slate-400">项目《10kV高压线路自动化开关终端状态在线检测、故障智能感知与自主调控修复装置》在全国总决赛脱颖而出，摘得国家一等奖桂冠。</p>
+            <h4 class="text-base font-bold text-white">第19届“挑战杯”学术科技竞赛 国家一等奖 · 省级大创《低压台区功率移相均衡装置》立项</h4>
+            <p class="text-xs text-slate-400">项目《10kV高压线路自动化开关终端状态在线检测、故障智能感知与自主调控修复装置》在全国总决赛脱颖而出，摘得国家一等奖桂冠；同月获批湖南省大创重点省级立项，结业湖南省青马工程骨干培训。</p>
           </div>
         </div>
 
@@ -1029,8 +1279,8 @@
               <span class="text-xs font-mono text-slate-400 font-semibold">2024年 - 2025年</span>
               <span class="px-2 py-0.5 text-[10px] bg-slate-800 text-slate-300 rounded border border-slate-700">基石沉淀</span>
             </div>
-            <h4 class="text-base font-bold text-white">当选班长 · 接掌创翼实验室 · 湖南省青马骨干培训</h4>
-            <p class="text-xs text-slate-400">当选2024级电气工程及其自动化3班班长；进驻并负责创翼电子实验室，完成湖南省青年马克思主义者培养学院考核结业。</p>
+            <h4 class="text-base font-bold text-white">当选班长 · 掌舵创翼实验室 · 荣获校乙等奖学金、优秀共青团员、军训优秀学员</h4>
+            <p class="text-xs text-slate-400">入学军训表现突出获“优秀学员”称号；当选24级电力3班班长；扎根并负责创翼电子实验室，荣获邵阳学院“优秀共青团员”荣誉称号及邵阳学院乙等奖学金。</p>
           </div>
         </div>
 
@@ -1053,7 +1303,7 @@
         <div class="p-6 sm:p-8 rounded-2xl bg-slate-900/60 border border-slate-800/80 backdrop-blur-md space-y-6">
           <h3 class="text-lg font-bold text-white">保持联系</h3>
           <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-            无论您是对配电网智能自愈算法、嵌入式硬件开发感兴趣，还是有相关的科研攻关、竞赛合作或招聘需求，都非常欢迎与我交流！
+            无论您是对配电网智能自愈算法、嵌入式硬件与机器人开发感兴趣，还是有相关的科研攻关、竞赛合作或招聘需求，都非常欢迎与我交流！
           </p>
 
           <div class="space-y-4 text-xs sm:text-sm">
@@ -1083,21 +1333,21 @@
         <!-- Right: Interactive Message / Note Board -->
         <div class="lg:col-span-2 p-6 sm:p-8 rounded-2xl bg-gradient-to-b from-slate-900/90 to-slate-950 border border-slate-800/80 backdrop-blur-md space-y-6">
           <div class="flex items-center justify-between border-b border-slate-800 pb-4">
-            <span class="text-xs font-mono text-cyan-400">QUICK CONNECT / WECHAT & PHONE</span>
-            <span class="text-xs text-slate-500">本地离线保护</span>
+            <span class="text-xs font-mono text-cyan-400">QUICK CONNECT / WECHAT & RESUME</span>
+            <span class="text-xs text-slate-500">17项荣誉同步验证</span>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             
             <div class="p-5 rounded-xl bg-slate-950/80 border border-slate-800 space-y-3">
               <div class="flex items-center gap-2 text-cyan-400 font-semibold text-sm">
-                <i data-lucide="phone-call" class="w-4 h-4"></i> 常用沟通方式
+                <i data-lucide="message-circle" class="w-4 h-4"></i> 即时沟通与微信
               </div>
               <p class="text-xs text-slate-400 leading-relaxed">
-                手机号与微信同号。需要联系方式填表或业务沟通时，随时可联系。
+                可通过 QQ 邮箱与手机取得联系。需要进一步学术探讨或填表沟通时即时可达。
               </p>
               <button onclick="showContactAlert()" class="w-full py-2.5 rounded-lg bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 text-xs font-semibold transition-colors flex items-center justify-center gap-1.5">
-                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> 查看即时微信 / 电话
+                <i data-lucide="phone-call" class="w-3.5 h-3.5"></i> 查看即时联系方式
               </button>
             </div>
 
@@ -1106,7 +1356,7 @@
                 <i data-lucide="printer" class="w-4 h-4"></i> 打印与离线PDF导出
               </div>
               <p class="text-xs text-slate-400 leading-relaxed">
-                网站内置标准A4排版的专业求职简历，支持一键调出浏览器打印对话框并保存为PDF。
+                全量整合了 17 项奖项与专利排版的标准 A4 专业求职简历，支持一键调用打印并保存为 PDF。
               </p>
               <button onclick="openPrintModal()" class="w-full py-2.5 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-semibold transition-colors flex items-center justify-center gap-1.5">
                 <i data-lucide="file-down" class="w-3.5 h-3.5"></i> 打开标准简历并导出PDF
@@ -1136,7 +1386,7 @@
     <div class="max-w-7xl mx-auto px-4 space-y-2">
       <p class="font-mono">Designed & Engineered with Passion for Zhang Guoshu</p>
       <p>© 2026 张国树 (Guoshu Zhang) · 邵阳学院 电气工程及其自动化 · All Rights Reserved.</p>
-      <p class="text-[11px] text-slate-600">本地知识库架构 · 基于 Obsidian 大脑原生事实深度构建</p>
+      <p class="text-[11px] text-slate-600">本地知识库架构 · 与 Obsidian 大脑 17 项权威荣誉完全同步</p>
     </div>
   </footer>
 
@@ -1176,7 +1426,7 @@
       <div class="no-print flex items-center justify-between border-b pb-4 mb-6">
         <div class="flex items-center gap-2">
           <i data-lucide="printer" class="w-5 h-5 text-cyan-600"></i>
-          <span class="font-bold text-slate-800">标准求职简历 (A4打印预览)</span>
+          <span class="font-bold text-slate-800">标准求职简历 (A4打印预览 · 包含全部17项荣誉)</span>
         </div>
         <div class="flex items-center gap-3">
           <button onclick="window.print()" class="px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white text-xs font-bold rounded-lg shadow flex items-center gap-1.5">
@@ -1195,10 +1445,10 @@
         <div class="flex items-center justify-between border-b-2 border-slate-900 pb-5">
           <div>
             <h1 class="text-3xl font-extrabold text-slate-900 tracking-tight">张国树</h1>
-            <p class="text-sm font-semibold text-cyan-700 mt-1">邵阳学院 · 电气工程及其自动化 (2024级) | 求职意向：配电网自动化 / 嵌入式研发 / 硬件工程师</p>
+            <p class="text-sm font-semibold text-cyan-700 mt-1">邵阳学院 · 电气工程及其自动化 (2024级) | 求职意向：配电网自动化 / 嵌入式研发 / 硬件与机器人工程师</p>
             <div class="flex flex-wrap gap-4 text-xs text-slate-600 mt-2">
               <span>政治面貌：共青团员 (入党积极分子)</span>
-              <span>身份：24级电力3班班长 · 创翼实验室负责人</span>
+              <span>职务：2024级电力3班班长 · 创翼电子实验室负责人</span>
               <span>邮箱：2565355609@qq.com</span>
             </div>
           </div>
@@ -1221,35 +1471,56 @@
             <span class="font-mono text-slate-600">2024.09 - 至今</span>
           </div>
           <p class="text-xs text-slate-600">
-            <strong>主修课程与成绩：</strong>自动控制原理、电路理论、单片机原理与接口技术、电力系统分析、模拟电子技术、数字电子技术、C语言程序设计等。
+            <strong>主修课程：</strong>自动控制原理、电路理论、单片机原理与接口技术、电力系统分析、模拟电子技术、数字电子技术、C语言程序设计等。
           </p>
         </div>
 
-        <!-- Section: Core Honors -->
+        <!-- Section: All 17 Honors Grouped -->
         <div class="space-y-2">
           <h2 class="text-sm font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 flex items-center gap-2">
-            <span>🏆 核心荣誉与国家级奖项</span>
+            <span>🏆 核心学科竞赛与学术科技成果</span>
           </h2>
           <ul class="space-y-1.5 text-xs text-slate-700">
             <li class="flex justify-between">
-              <span><strong>第十九届“挑战杯”全国大学生课外学术科技作品竞赛【国家一等奖】</strong>（作品：《10kV高压线路开关终端状态在线检测与自愈装置》）</span>
+              <span><strong>① 第19届“挑战杯”全国大学生课外学术科技作品竞赛【国家级一等奖】</strong>（作品：《10kV高压线路开关终端状态在线检测与自愈装置》）</span>
               <span class="font-mono text-slate-500">2025</span>
             </li>
             <li class="flex justify-between">
-              <span><strong>2025年中国国际大学生创新大赛【湖南省银奖】</strong>（项目：《10kV配电网终端设备故障智慧感知自愈系统》）</span>
-              <span class="font-mono text-slate-500">2025.07</span>
-            </li>
-            <li class="flex justify-between">
-              <span><strong>湖南省大学生创新训练计划项目【省级立项】</strong>（项目：《低压台区功率移相均衡装置的研制》）</span>
-              <span class="font-mono text-slate-500">2025.06</span>
-            </li>
-            <li class="flex justify-between">
-              <span><strong>央视CCTV新闻专题报道</strong>（团队输电线路故障抓拍与多源感知装置获国家级媒体报道）</span>
-              <span class="font-mono text-slate-500">2025.10</span>
-            </li>
-            <li class="flex justify-between">
-              <span><strong>中国大学生“自强之星”</strong> 推荐候选人、湖南省青马工程骨干培训结业证书</span>
+              <span><strong>② 中国国际大学生创新大赛（湖南省赛）【高教主赛道本科生创意组 二等奖（银奖）】</strong>（项目：《10kV配电网终端设备故障智慧感知自愈系统》）</span>
               <span class="font-mono text-slate-500">2025</span>
+            </li>
+            <li class="flex justify-between">
+              <span><strong>③ “创客中国”中小微企业创新创业大赛【邵阳市复赛创业组 三等奖】</strong></span>
+              <span class="font-mono text-slate-500">2025</span>
+            </li>
+            <li class="flex justify-between">
+              <span><strong>⑧ 湖南省大学生创新创业训练计划项目【省级重点立项】</strong>：《输电线路故障图像高速捕获方法研究》（项目负责人）</span>
+              <span class="font-mono text-slate-500">2026</span>
+            </li>
+            <li class="flex justify-between">
+              <span><strong>⑨ 湖南省大学生创新创业训练计划项目【省级重点立项】</strong>：《低压台区功率移相均衡装置的研制》（核心骨干）</span>
+              <span class="font-mono text-slate-500">2025</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Section: Robotics & Smart Cars -->
+        <div class="space-y-2">
+          <h2 class="text-sm font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 flex items-center gap-2">
+            <span>🤖 机器人与智能车竞技获奖</span>
+          </h2>
+          <ul class="space-y-1 text-xs text-slate-700">
+            <li class="flex justify-between">
+              <span><strong>⑪ 全国大学生智能汽车大赛</strong> 邵阳学院校级选拔赛【二等奖】</span>
+              <span class="font-mono text-slate-500">2026</span>
+            </li>
+            <li class="flex justify-between">
+              <span><strong>⑫ 中国机器人及人工智能大赛</strong> 邵阳学院校级选拔赛【二等奖】</span>
+              <span class="font-mono text-slate-500">2026</span>
+            </li>
+            <li class="flex justify-between">
+              <span><strong>⑬ 睿抗机器人开发者大赛 (RAICOM)</strong> 邵阳学院校赛选拔赛【三等奖】</span>
+              <span class="font-mono text-slate-500">2026</span>
             </li>
           </ul>
         </div>
@@ -1257,14 +1528,48 @@
         <!-- Section: Intellectual Property -->
         <div class="space-y-2">
           <h2 class="text-sm font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 flex items-center gap-2">
-            <span>📜 发明专利与计算机软件著作权</span>
+            <span>📜 发明专利与知识产权</span>
           </h2>
-          <div class="grid grid-cols-2 gap-x-4 gap-y-1.5 text-xs text-slate-700">
-            <div>• 实用新型专利：《一种排烟枪设备》（申请号：2025218546396）</div>
-            <div>• 实用新型专利：《一种光纤传感探头封装结构》（申请号：2025210751513）</div>
-            <div>• 实用新型专利：《一种光纤传感探头》（申请号：2025210983830）</div>
-            <div>• 计算机软件著作权：《FTU备用电源工作环境温湿度检测系统 V5.0》（登记号：2025SR1454812）</div>
+          <div class="grid grid-cols-2 gap-x-4 gap-y-1 text-xs text-slate-700">
+            <div>• <strong>④ 实用新型专利：</strong>《一种光纤传感探头封装结构》（第二发明人，申请号：202521075151.3）</div>
+            <div>• <strong>⑤ 实用新型专利：</strong>《一种光纤传感探头》（第二发明人，申请号：202521098383.0）</div>
+            <div>• <strong>⑥ 实用新型专利：</strong>《一种光纤连接器结构》（第二发明人，申请号：202521558691.7）</div>
+            <div>• <strong>⑦ 实用新型专利：</strong>《一种排烟枪设备》（第四发明人，申请号：202521854639.6）</div>
+            <div class="col-span-2">• <strong>计算机软件著作权：</strong>《FTU备用电源工作环境温湿度检测系统 V5.0》（登记号：2025SR1454812）</div>
           </div>
+        </div>
+
+        <!-- Section: Scholarships & Social Honors -->
+        <div class="space-y-2">
+          <h2 class="text-sm font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 flex items-center gap-2">
+            <span>🎖️ 学业奖学金与社会综合荣誉</span>
+          </h2>
+          <ul class="space-y-1 text-xs text-slate-700">
+            <li class="flex justify-between">
+              <span><strong>⑩ 2024-2025学年度 邵阳学院乙等奖学金</strong></span>
+              <span class="font-mono text-slate-500">2025</span>
+            </li>
+            <li class="flex justify-between">
+              <span><strong>⑭ 邵阳学院第12届思政课研究性学习成果展示竞赛【三等奖】</strong></span>
+              <span class="font-mono text-slate-500">2026</span>
+            </li>
+            <li class="flex justify-between">
+              <span><strong>⑮ 邵阳学院“优秀共青团员”荣誉称号</strong></span>
+              <span class="font-mono text-slate-500">2024</span>
+            </li>
+            <li class="flex justify-between">
+              <span><strong>⑯ 邵阳学院“社会实践活动先进个人”荣誉称号</strong></span>
+              <span class="font-mono text-slate-500">2025</span>
+            </li>
+            <li class="flex justify-between">
+              <span><strong>⑰ 新生军事技能训练“优秀学员”称号</strong></span>
+              <span class="font-mono text-slate-500">2024</span>
+            </li>
+            <li class="flex justify-between">
+              <span><strong>媒体与培训：</strong>央视CCTV专项新闻报道、湖南省青马工程骨干培训结业、“中国大学生自强之星”推荐候选人</span>
+              <span class="font-mono text-slate-500">2025</span>
+            </li>
+          </ul>
         </div>
 
         <!-- Section: Key Engineering Projects -->
@@ -1280,17 +1585,17 @@
             </div>
             <p class="text-slate-600 leading-relaxed">
               • 研发双模自适应电池主动均衡策略，克服蓄电池野外衰减难题；针对高阻单相接地故障，提出微秒级暂态故障特征辨识算法。<br>
-              • 执笔软著代码，参与洞口县供电公司真型环网柜现场汇报与产品验收，斩获“挑战杯”国家一等奖与大创省银奖。
+              • 执笔软著代码，参与洞口县供电公司真型环网柜现场汇报与产品验收，斩获第19届“挑战杯”国家一等奖与大创省二等奖。
             </p>
           </div>
 
           <div class="space-y-1 text-xs">
             <div class="flex justify-between font-bold text-slate-900">
-              <span>输电线路瞬态故障图像高速主动抓拍与多源感知装置 · 项目负责人</span>
+              <span>输电线路瞬态故障图像高速主动抓拍与多源感知装置 · 项目负责人 (省级大创)</span>
               <span class="font-mono text-slate-500">2025 - 2026</span>
             </div>
             <p class="text-slate-600 leading-relaxed">
-              • 历经14版系统迭代，设计光学脉冲与工频电场变化率复合主动触发判据，实现微秒级瞬态故障高速抓拍。<br>
+              • 历经14版系统迭代，设计光学脉冲与工频电场变化率复合主动触发判据，实现微秒级瞬态故障高速抓拍，获批2026省级大创立项。<br>
               • 深入邵阳雪峰山高海拔、冰冻高湿恶劣气候开展野外实装测试，相关科研成果被央视CCTV专题深入报道。
             </p>
           </div>
@@ -1302,7 +1607,7 @@
             <span>🛠️ 专业技能与综合素养</span>
           </h2>
           <div class="text-xs text-slate-700 space-y-1">
-            <p>• <strong>嵌入式与硬件：</strong>熟练掌握 STM32 / 51单片机开发、C语言、电路原理图设计与PCB调试，精通I2C/SPI/UART通信及MODBUS规约。</p>
+            <p>• <strong>嵌入式与硬件：</strong>熟练掌握 STM32 / 51单片机开发、C语言、电路原理图设计与PCB调试，精通I2C/SPI/UART通信及MODBUS规约，具备智能车与机器人闭环控制经验。</p>
             <p>• <strong>电力系统与软件：</strong>熟悉10kV配电网结构、自动控制原理、Unreal Engine 5三维仿真，精通Obsidian数字化知识工程管理。</p>
             <p>• <strong>综合担当：</strong>担任24级电力3班班长、创翼实验室负责人、中国电源协会会员，做事追求严谨化、逻辑闭环与实战交付。</p>
           </div>

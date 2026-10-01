@@ -145,6 +145,33 @@ function filterProjects(category) {
 }
 
 // ==========================================
+// Honors & Awards Filter Logic (17 Items)
+// ==========================================
+function filterHonors(category) {
+  const buttons = document.querySelectorAll('.honor-tab-btn');
+  buttons.forEach((btn) => {
+    if (btn.getAttribute('data-hfilter') === category) {
+      btn.className =
+        'honor-tab-btn px-3 py-1.5 rounded-lg font-medium transition-all bg-amber-500/20 text-amber-300 border border-amber-500/30';
+    } else {
+      btn.className =
+        'honor-tab-btn px-3 py-1.5 rounded-lg font-medium transition-all text-slate-400 hover:text-white';
+    }
+  });
+
+  const cards = document.querySelectorAll('.honor-card');
+  cards.forEach((card) => {
+    const cardCat = card.getAttribute('data-category');
+    if (category === 'all' || cardCat === category) {
+      card.style.display = 'flex';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+
+// ==========================================
 // Image Modal Viewer
 // ==========================================
 function openImageModal(src, caption) {
