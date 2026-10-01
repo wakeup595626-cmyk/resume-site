@@ -473,7 +473,7 @@
     <a href="javascript:;" class="contact-item" onclick="copyWechat(this)" data-wechat="zgswakeup">
       <span class="icon"></span>
       <div>
-        <div class="label">微信</div>
+        <div class="label">微信(点击复制微信号)</div>
         <div class="value">zgswakeup</div>
       </div></a>
     <a href="https://github.com/wakeup595626-cmyk" class="contact-item" target="_blank">
@@ -495,8 +495,48 @@
 </section>
 
 <footer>
-  <p> 2026 张国树  用 <span class="heart"></span> 和 <span class="heart"></span> 构建  托管于 Cloudflare Pages</p>
+  <p> 2026 张国树 用 <span class="heart"></span> 和 <span class="heart"></span> 构建 托管于 Cloudflare Pages</p>
 </footer>
+
+<style>
+  .heart {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #e63946;
+    /*柔和一点的红色，不刺眼 */
+    transform: rotate(-45deg);
+    position: relative;
+    margin: 0 5px;
+    vertical-align: middle;
+    /* 和文字居中对齐，关键 */
+  }
+
+  .heart::before,
+  .heart::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: #e63946;
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  .heart::before {
+    top: -6px;
+    left: 0;
+  }
+
+  .heart::after {
+    top: 0;
+    right: -6px;
+  }
+
+  /* 可选：给footer p增加行高，防止爱心上半部分被裁切 */
+  footer p {
+    line-height: 1.8;
+  }
+</style>
 
 
 <script>
