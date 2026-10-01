@@ -470,6 +470,19 @@
       <span class="icon"></span>
       <div><div class="label">QQ</div><div class="value">2565368932</div></div>
     </a>
+    <a href="javascript:;" class="contact-item" onclick="copyWechat(this)" data-wechat="zgswakeup">
+      <span class="icon"></span>
+      <div>
+        <div class="label">微信</div>
+        <div class="value">zgswakeup</div>
+      </div></a>
+    <a href="https://github.com/wakeup595626-cmyk" class="contact-item" target="_blank">
+      <span class="icon"></span>
+      <div>
+        <div class="label">Github</div>
+        <div class="value">wakeup595626-cmyk</div>
+      </div>
+    </a>
     <div class="contact-item">
       <span class="icon"></span>
       <div><div class="label">学校</div><div class="value">邵阳学院  电气工程学院</div></div>
@@ -484,6 +497,26 @@
 <footer>
   <p> 2026 张国树  用 <span class="heart"></span> 和 <span class="heart"></span> 构建  托管于 Cloudflare Pages</p>
 </footer>
+
+
+<script>
+  async function copyWechat(el) {
+    const wx = el.dataset.wechat;
+    try {
+      await navigator.clipboard.writeText(wx);
+      alert("微信号已复制！去微信粘贴添加好友");
+    } catch (err) {
+      // 低版本浏览器降级方案
+      const input = document.createElement('input');
+      input.value = wx;
+      document.body.appendChild(input);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+      alert("微信号已复制！");
+    }
+  }
+</script>
 
 <script>
 // Scroll reveal animation
