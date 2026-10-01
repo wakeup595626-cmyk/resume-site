@@ -466,16 +466,20 @@
       <span class="icon"></span>
       <div><div class="label">手机</div><div class="value">19386902768</div></div>
     </a>
-    <a href="https://wpa.qq.com/msgrd?v=3&uin=2565368932&site=qq&menu=yes" class="contact-item" target="_blank">
-      <span class="icon"></span>
-      <div><div class="label">QQ</div><div class="value">2565368932</div></div>
-    </a>
-    <a href="javascript:;" class="contact-item" onclick="copyWechat(this)" data-wechat="zgswakeup">
+    <a href="javascript:;" class="contact-item" onclick="copyQQ(this)" data-qq="2565368932">
       <span class="icon"></span>
       <div>
-        <div class="label">微信(点击复制微信号)</div>
-        <div class="value">zgswakeup</div>
-      </div></a>
+        <div class="label">QQ(点击复制QQ号)</div>
+        <div class="value">2565368932</div>
+        </div>
+    </a>
+    <a href="javascript:;" class="contact-item" onclick="copyWechat(this)" data-wechat="zgswakeup">
+        <span class="icon"></span>
+        <div>
+          <div class="label">微信(点击复制微信号)</div>
+          <div class="value">zgswakeup</div>
+        </div>
+      </a>
     <a href="https://github.com/wakeup595626-cmyk" class="contact-item" target="_blank">
       <span class="icon"></span>
       <div>
@@ -538,15 +542,32 @@
   }
 </style>
 
-
 <script>
+  // 复制QQ
+  async function copyQQ(el) {
+    const qq = el.dataset.qq;
+    try {
+      await navigator.clipboard.writeText(qq);
+      alert("QQ号已复制！");
+    } catch (err) {
+      // 旧浏览器降级
+      const input = document.createElement('input');
+      input.value = qq;
+      document.body.appendChild(input);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+      alert("QQ号已复制！");
+    }
+  }
+
+  // 复制微信
   async function copyWechat(el) {
     const wx = el.dataset.wechat;
     try {
       await navigator.clipboard.writeText(wx);
-      alert("微信号已复制！去微信粘贴添加好友");
+      alert("微信号已复制！");
     } catch (err) {
-      // 低版本浏览器降级方案
       const input = document.createElement('input');
       input.value = wx;
       document.body.appendChild(input);
