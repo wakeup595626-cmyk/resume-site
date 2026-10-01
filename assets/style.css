@@ -1,40 +1,38 @@
-/* Custom CSS for Zhang Guoshu Portfolio */
+/* Clean Minimalist Styling for Zhang Guoshu Portfolio */
 
-/* Custom smooth dark scrollbar */
+/* Minimalist Dot Grid Background */
+.bg-grid-pattern {
+  background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Subtle clean scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #080c14;
+  background: #f8fafc;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
-  border-radius: 4px;
+  background: #cbd5e1;
+  border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: #94a3b8;
 }
 
-/* Glassmorphism helpers */
-.glass-card {
-  background: rgba(17, 24, 39, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+/* Shadow utilities */
+.shadow-2xs {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
 }
 
-.glass-card-hover {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.glass-card-hover:hover {
-  transform: translateY(-3px);
-  border-color: rgba(6, 182, 212, 0.4);
-  box-shadow: 0 10px 30px -10px rgba(6, 182, 212, 0.2);
+/* Smooth transition for card hover */
+.hover\:scale-102:hover {
+  transform: scale(1.015);
 }
 
 /* Print CSS */
@@ -46,16 +44,15 @@
 
   header,
   footer,
-  #electric-canvas,
   .no-print,
   #hero,
-  #awards,
+  #honors,
   #projects,
   #patents,
   #skills,
   #timeline,
   #contact,
-  .ambient-blob,
+  .bg-grid-pattern,
   #toast {
     display: none !important;
   }
@@ -77,12 +74,12 @@
 
   #printable-resume {
     display: block !important;
-    font-size: 11pt !important;
+    font-size: 10.5pt !important;
     line-height: 1.4 !important;
   }
 
   @page {
-    margin: 1.5cm;
+    margin: 1.2cm;
     size: A4 portrait;
   }
 }

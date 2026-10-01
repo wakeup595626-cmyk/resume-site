@@ -1,17 +1,14 @@
 // ==========================================
-// Zhang Guoshu Portfolio Application Scripts
+// Zhang Guoshu Portfolio - Clean Minimalist Script
 // ==========================================
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Initialize Lucide Icons
+  // Initialize Lucide Icons
   if (window.lucide) {
     lucide.createIcons();
   }
 
-  // 2. Setup Electric Canvas Background
-  initElectricCanvas();
-
-  // 3. Mobile Navigation Toggle
+  // Mobile Navigation Toggle
   const mobileBtn = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
   if (mobileBtn && mobileMenu) {
@@ -28,123 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ==========================================
-// Interactive Electric Circuit Canvas
-// ==========================================
-function initElectricCanvas() {
-  const canvas = document.getElementById('electric-canvas');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-
-  let width = (canvas.width = window.innerWidth);
-  let height = (canvas.height = window.innerHeight);
-
-  window.addEventListener('resize', () => {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
-  });
-
-  const mouse = { x: -1000, y: -1000 };
-  window.addEventListener('mousemove', (e) => {
-    mouse.x = e.clientX;
-    mouse.y = e.clientY;
-  });
-
-  // Create particles
-  const particleCount = Math.floor((width * height) / 18000);
-  const particles = [];
-
-  for (let i = 0; i < particleCount; i++) {
-    particles.push({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      vx: (Math.random() - 0.5) * 0.4,
-      vy: (Math.random() - 0.5) * 0.4,
-      radius: Math.random() * 1.5 + 1,
-      color: Math.random() > 0.4 ? 'rgba(56, 189, 248, ' : 'rgba(52, 211, 153, ' // cyan or voltage green
-    });
-  }
-
-  function animate() {
-    ctx.clearRect(0, 0, width, height);
-
-    // Update & draw particles
-    for (let i = 0; i < particles.length; i++) {
-      const p = particles[i];
-      p.x += p.vx;
-      p.y += p.vy;
-
-      if (p.x < 0 || p.x > width) p.vx *= -1;
-      if (p.y < 0 || p.y > height) p.vy *= -1;
-
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-      ctx.fillStyle = p.color + '0.7)';
-      ctx.fill();
-
-      // Connect to mouse
-      const dxMouse = mouse.x - p.x;
-      const dyMouse = mouse.y - p.y;
-      const distMouse = Math.sqrt(dxMouse * dxMouse + dyMouse * dyMouse);
-      if (distMouse < 140) {
-        ctx.beginPath();
-        ctx.moveTo(p.x, p.y);
-        ctx.lineTo(mouse.x, mouse.y);
-        ctx.strokeStyle = `rgba(14, 165, 233, ${(1 - distMouse / 140) * 0.4})`;
-        ctx.lineWidth = 1;
-        ctx.stroke();
-      }
-
-      // Connect near particles
-      for (let j = i + 1; j < particles.length; j++) {
-        const p2 = particles[j];
-        const dx = p.x - p2.x;
-        const dy = p.y - p2.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-
-        if (dist < 90) {
-          ctx.beginPath();
-          ctx.moveTo(p.x, p.y);
-          ctx.lineTo(p2.x, p2.y);
-          ctx.strokeStyle = `rgba(56, 189, 248, ${(1 - dist / 90) * 0.15})`;
-          ctx.lineWidth = 0.6;
-          ctx.stroke();
-        }
-      }
-    }
-
-    requestAnimationFrame(animate);
-  }
-
-  animate();
-}
-
-// ==========================================
-// Project Filter Logic
-// ==========================================
-function filterProjects(category) {
-  const buttons = document.querySelectorAll('.project-tab-btn');
-  buttons.forEach((btn) => {
-    if (btn.getAttribute('data-filter') === category) {
-      btn.className =
-        'project-tab-btn px-3 py-1.5 rounded-lg font-medium transition-all bg-cyan-500/20 text-cyan-300 border border-cyan-500/30';
-    } else {
-      btn.className =
-        'project-tab-btn px-3 py-1.5 rounded-lg font-medium transition-all text-slate-400 hover:text-white';
-    }
-  });
-
-  const cards = document.querySelectorAll('.project-card');
-  cards.forEach((card) => {
-    const cats = card.getAttribute('data-category').split(' ');
-    if (category === 'all' || cats.includes(category)) {
-      card.style.display = 'flex';
-    } else {
-      card.style.display = 'none';
-    }
-  });
-}
-
-// ==========================================
 // Honors & Awards Filter Logic (17 Items)
 // ==========================================
 function filterHonors(category) {
@@ -152,10 +32,10 @@ function filterHonors(category) {
   buttons.forEach((btn) => {
     if (btn.getAttribute('data-hfilter') === category) {
       btn.className =
-        'honor-tab-btn px-3 py-1.5 rounded-lg font-medium transition-all bg-amber-500/20 text-amber-300 border border-amber-500/30';
+        'honor-tab-btn px-3 py-1.5 rounded-md font-medium transition-all bg-white text-slate-900 shadow-2xs';
     } else {
       btn.className =
-        'honor-tab-btn px-3 py-1.5 rounded-lg font-medium transition-all text-slate-400 hover:text-white';
+        'honor-tab-btn px-3 py-1.5 rounded-md font-medium transition-all text-slate-600 hover:text-slate-900';
     }
   });
 
@@ -169,7 +49,6 @@ function filterHonors(category) {
     }
   });
 }
-
 
 // ==========================================
 // Image Modal Viewer
@@ -206,12 +85,12 @@ document.getElementById('image-modal')?.addEventListener('click', (e) => {
 // ==========================================
 const projectData = {
   ftu: {
-    title: '10kV配电网终端(FTU)智能感知与自主调控自愈系统',
-    badge: '国家级挑战杯一等奖 · 洞口县供电公司真型验收',
+    title: '10kV配电网自动化终端(FTU)智能感知与自主调控自愈系统',
+    badge: '国家级挑战杯一等奖 · 洞口县供电公司实地验收',
     date: '2025.03 - 2025.11',
-    role: '核心骨干研发成员',
+    role: '核心研发成员',
     overview:
-      '面对现代中压配电网高比例分布式电源接入带来的暂态冲击、高阻单相接地故障选线困难，以及野外架空配电终端(FTU)备用铅酸/锂电池因恶劣温湿度环境频繁故障失效的痛点，团队研发了涵盖“备电智能均衡+微秒级暂态故障选线+有向图自愈恢复”的成套软硬件系统。',
+      '面对现代中压配电网高比例分布式电源接入带来的暂态冲击、高阻单相接地故障选线困难，以及野外架空配电终端(FTU)备用电池因恶劣温湿度环境频繁故障失效的痛点，团队研发了涵盖“备电智能均衡 + 微秒级暂态故障选线 + 有向图自愈恢复”的成套软硬件系统。',
     sections: [
       {
         heading: '核心技术突破与架构',
@@ -264,9 +143,9 @@ const projectData = {
     title: '低压台区功率移相均衡装置的研制',
     badge: '湖南省大学生创新训练计划 · 省级重点立项',
     date: '2025.06 - 至今',
-    role: '项目核心研发成员',
+    role: '核心研发成员',
     overview:
-      '农村配电台区及城市末端电网中，单相大功率负荷（如充电桩、空调）接入导致三相严重不平衡，造成变压器过热、中性线烧损及末端低电压。本项目研究电力电子主动移相与动态负荷转移成套装置。',
+      '农村配电台区及城市末端电网中，单相大功率负荷接入导致三相严重不平衡，造成变压器过热、中性线烧损及末端低电压。本项目研究电力电子主动移相与动态负荷转移成套装置。',
     sections: [
       {
         heading: '技术要点',
@@ -282,9 +161,9 @@ const projectData = {
   },
   smoke: {
     title: '便携式多功能排烟枪设备与消防应急转化',
-    badge: '国家实用新型专利 (2025218546396) · 消防实战合作',
+    badge: '国家实用新型专利 (202521854639.6) · 消防实战合作',
     date: '2025.08',
-    role: '专利发明人之一',
+    role: '第四发明人',
     overview:
       '针对建筑密闭过道、地下管廊等受限空间火灾浓烟积聚、救援视线受阻的问题，研制了手持便携、强风压轴流导流的排烟枪装置。',
     sections: [
@@ -292,7 +171,7 @@ const projectData = {
         heading: '核心价值与落地',
         items: [
           '设计特殊文丘里加速导流罩与高倍率气流增压风筒，在有限能耗下形成大穿透力正压风幕。',
-          '正式申报并受理国家实用新型专利（申请号：2025218546396）。',
+          '正式申报并受理国家实用新型专利（申请号：202521854639.6）。',
           '与湖南城步苗族自治县消防救援大队、大祥区消防联合录制科普宣教视频，推广实战救援装备应用。'
         ]
       }
@@ -313,10 +192,10 @@ function openProjectModal(key) {
   let sectionsHtml = '';
   if (data.sections) {
     data.sections.forEach((sec) => {
-      let listHtml = sec.items.map((it) => `<li class="text-xs sm:text-sm text-slate-300 leading-relaxed">${it}</li>`).join('');
+      let listHtml = sec.items.map((it) => `<li class="text-xs sm:text-sm text-slate-700 leading-relaxed">${it}</li>`).join('');
       sectionsHtml += `
         <div class="space-y-2 mt-4">
-          <h4 class="font-bold text-sm text-cyan-300 border-l-2 border-cyan-500 pl-2">${sec.heading}</h4>
+          <h4 class="font-bold text-sm text-slate-900 border-l-2 border-sky-600 pl-2">${sec.heading}</h4>
           <ul class="list-disc list-inside space-y-1.5 pl-1">
             ${listHtml}
           </ul>
@@ -328,14 +207,14 @@ function openProjectModal(key) {
   container.innerHTML = `
     <div class="space-y-4">
       <div class="flex items-center gap-2">
-        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">${data.badge}</span>
+        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-sky-50 text-sky-800 border border-sky-100">${data.badge}</span>
         <span class="text-xs font-mono text-slate-400 ml-auto">${data.date}</span>
       </div>
 
-      <h3 class="text-xl sm:text-2xl font-bold text-white">${data.title}</h3>
-      <p class="text-xs font-mono text-slate-400">担任角色：<span class="text-cyan-400 font-semibold">${data.role}</span></p>
+      <h3 class="text-xl sm:text-2xl font-bold text-slate-900">${data.title}</h3>
+      <p class="text-xs font-mono text-slate-500">担任角色：<span class="text-slate-900 font-semibold">${data.role}</span></p>
 
-      <div class="p-4 rounded-xl bg-slate-950/70 border border-slate-800 text-xs sm:text-sm text-slate-300 leading-relaxed">
+      <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-700 leading-relaxed">
         ${data.overview}
       </div>
 
@@ -344,9 +223,9 @@ function openProjectModal(key) {
       ${
         data.image
           ? `
-        <div class="mt-4 rounded-xl overflow-hidden border border-slate-800">
+        <div class="mt-4 rounded-xl overflow-hidden border border-slate-200">
           <img src="${data.image}" alt="${data.title}" class="w-full max-h-64 object-cover">
-          <p class="text-[11px] text-slate-400 p-2 bg-slate-950 text-center font-mono">${data.imageCaption || ''}</p>
+          <p class="text-[11px] text-slate-500 p-2 bg-slate-50 text-center font-mono border-t border-slate-100">${data.imageCaption || ''}</p>
         </div>
       `
           : ''
@@ -400,7 +279,7 @@ document.getElementById('print-modal')?.addEventListener('click', (e) => {
 });
 
 // ==========================================
-// Utilities: Copy & Alert
+// Utilities: Copy & Toast
 // ==========================================
 function showToast(msg) {
   const toast = document.getElementById('toast');
@@ -418,11 +297,6 @@ function copyContact(text) {
   navigator.clipboard.writeText(text).then(() => {
     showToast(`已复制：${text}`);
   }).catch(() => {
-    prompt('请长按复制联系方式：', text);
+    prompt('请复制联系方式：', text);
   });
-}
-
-function showContactAlert() {
-  showToast('电话：193-8690-2768 | 微信：zgswakeup 已准备就绪');
-  alert('【张国树 个人联系方式】\n\n• 联系电话：193-8690-2768\n• 个人微信：zgswakeup\n• 常用邮箱：2565368932@qq.com / 2565355609@qq.com\n• 所在院校：邵阳学院电气工程学院 (2024级电力3班班长)\n• 实验室：邵阳学院创翼电子实验室 (304/332负责人)');
 }
