@@ -1,9 +1,15 @@
 # 张国树 · 个人简历与工程成果展示网站 (Personal Resume & Portfolio)
 
+**中文** | [English](README.en.md)
+
 > **智能配电网自动化 · 嵌入式系统与机器人 · 创新创业攻坚者**  
 > 邵阳学院 电气工程及其自动化 (2024级) · 24级电力3班班长 · 创翼电子实验室负责人
 
 ---
+
+## 项目简介
+
+本仓库是我的个人简历与工程成果展示网站的源代码。整站为**零依赖纯静态站点**：手写 HTML / CSS / JavaScript，不使用任何框架，也没有构建步骤——克隆后用任意静态服务器打开 `index.html` 即可运行。
 
 ## 🌟 17 项权威获奖荣誉与成果总览
 
@@ -57,3 +63,22 @@
   ```bash
   python -m http.server 8080
   ```
+
+---
+
+## 项目结构
+
+```text
+.
+├─ index.html   整站本体：结构、样式与交互（单文件）
+├─ assets/      页面使用的图片等媒体资源
+└─ README.md    项目说明（中文）
+```
+
+## 参与贡献
+
+参见 [CONTRIBUTING.md](CONTRIBUTING.md)（[English](CONTRIBUTING.en.md)）。
+
+## 许可证
+
+[MIT](LICENSE)
